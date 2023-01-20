@@ -1,0 +1,7 @@
+#Auto-generated check for: UNEXPECTED
+
+#East (+x) direction
+execute if block ~0 ~ ~ minecraft:purple_wool if block ~1 ~ ~ minecraft:yellow_wool if block ~2 ~ ~ minecraft:green_concrete_powder if block ~3 ~ ~ minecraft:yellow_concrete_powder if block ~4 ~ ~ minecraft:gray_wool if block ~5 ~ ~ minecraft:black_concrete_powder if block ~6 ~ ~ minecraft:yellow_concrete_powder if block ~7 ~ ~ minecraft:magenta_concrete_powder if block ~8 ~ ~ minecraft:light_blue_wool if block ~9 ~ ~ minecraft:yellow_concrete_powder if block ~10 ~ ~ minecraft:light_blue_concrete_powder if block ~11 ~ ~ minecraft:purple_wool run scoreboard players set @s word_id 11348
+
+#South (+z) direction
+execute if block ~ ~ ~0 minecraft:purple_wool if block ~ ~ ~1 minecraft:yellow_wool if block ~ ~ ~2 minecraft:green_concrete_powder if block ~ ~ ~3 minecraft:yellow_concrete_powder if block ~ ~ ~4 minecraft:gray_wool if block ~ ~ ~5 minecraft:black_concrete_powder if block ~ ~ ~6 minecraft:yellow_concrete_powder if block ~ ~ ~7 minecraft:magenta_concrete_powder if block ~ ~ ~8 minecraft:light_blue_wool if block ~ ~ ~9 minecraft:yellow_concrete_powder if block ~ ~ ~10 minecraft:light_blue_concrete_powder if block ~ ~ ~11 minecraft:purple_wool run scoreboard players set @s word_id 11348

@@ -1,0 +1,160 @@
+{
+    "letters": [
+        {
+            "value": 1,
+            "amount": 9,
+            "block": "minecraft:white_concrete_powder",
+            "letter": "A"
+        },
+        {
+            "value": 3,
+            "amount": 2,
+            "block": "minecraft:orange_concrete_powder",
+            "letter": "B"
+        },
+        {
+            "value": 3,
+            "amount": 2,
+            "block": "minecraft:magenta_concrete_powder",
+            "letter": "C"
+        },
+        {
+            "value": 2,
+            "amount": 4,
+            "block": "minecraft:light_blue_concrete_powder",
+            "letter": "D"
+        },
+        {
+            "value": 1,
+            "amount": 12,
+            "block": "minecraft:yellow_concrete_powder",
+            "letter": "E"
+        },
+        {
+            "value": 4,
+            "amount": 2,
+            "block": "minecraft:lime_concrete_powder",
+            "letter": "F"
+        },
+        {
+            "value": 2,
+            "amount": 3,
+            "block": "minecraft:pink_concrete_powder",
+            "letter": "G"
+        },
+        {
+            "value": 4,
+            "amount": 2,
+            "block": "minecraft:gray_concrete_powder",
+            "letter": "H"
+        },
+        {
+            "value": 1,
+            "amount": 9,
+            "block": "minecraft:light_gray_concrete_powder",
+            "letter": "I"
+        },
+        {
+            "value": 8,
+            "amount": 1,
+            "block": "minecraft:cyan_concrete_powder",
+            "letter": "J"
+        },
+        {
+            "value": 5,
+            "amount": 1,
+            "block": "minecraft:purple_concrete_powder",
+            "letter": "K"
+        },
+        {
+            "value": 1,
+            "amount": 4,
+            "block": "minecraft:blue_concrete_powder",
+            "letter": "L"
+        },
+        {
+            "value": 3,
+            "amount": 2,
+            "block": "minecraft:brown_concrete_powder",
+            "letter": "M"
+        },
+        {
+            "value": 1,
+            "amount": 6,
+            "block": "minecraft:green_concrete_powder",
+            "letter": "N"
+        },
+        {
+            "value": 1,
+            "amount": 8,
+            "block": "minecraft:red_concrete_powder",
+            "letter": "O"
+        },
+        {
+            "value": 3,
+            "amount": 2,
+            "block": "minecraft:black_concrete_powder",
+            "letter": "P"
+        },
+        {
+            "value": 10,
+            "amount": 1,
+            "block": "minecraft:white_wool",
+            "letter": "Q"
+        },
+        {
+            "value": 1,
+            "amount": 6,
+            "block": "minecraft:orange_wool",
+            "letter": "R"
+        },
+        {
+            "value": 1,
+            "amount": 4,
+            "block": "minecraft:magenta_wool",
+            "letter": "S"
+        },
+        {
+            "value": 1,
+            "amount": 6,
+            "block": "minecraft:light_blue_wool",
+            "letter": "T"
+        },
+        {
+            "value": 1,
+            "amount": 4,
+            "block": "minecraft:yellow_wool",
+            "letter": "U"
+        },
+        {
+            "value": 4,
+            "amount": 2,
+            "block": "minecraft:lime_wool",
+            "letter": "V"
+        },
+        {
+            "value": 4,
+            "amount": 2,
+            "block": "minecraft:pink_wool",
+            "letter": "W"
+        },
+        {
+            "value": 8,
+            "amount": 1,
+            "block": "minecraft:gray_wool",
+            "letter": "X"
+        },
+        {
+            "value": 4,
+            "amount": 2,
+            "block": "minecraft:light_gray_wool",
+            "letter": "Y"
+        },
+        {
+            "value": 10,
+            "amount": 1,
+            "block": "minecraft:cyan_wool",
+            "letter": "Z"
+        }
+    ]
+}
