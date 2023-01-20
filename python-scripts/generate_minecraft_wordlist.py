@@ -28,7 +28,7 @@ def generate_word(id: int, word: str) -> None:
     output += "execute "
 
     for x, block in enumerate(letter_blocks):
-        output += f"if block ~{x} ~ ~ {block} "
+        output += f"if block ~{x - 1} ~ ~ {block} "
 
     output += f"run scoreboard players set @s word_id {id}\n"
 
@@ -37,7 +37,7 @@ def generate_word(id: int, word: str) -> None:
     output += "execute "
 
     for z, block in enumerate(letter_blocks):
-        output += f"if block ~ ~ ~{z} {block} "
+        output += f"if block ~ ~ ~{z - 1} {block} "
 
     output += f"run scoreboard players set @s word_id {id}"
 
@@ -47,7 +47,7 @@ def generate_word(id: int, word: str) -> None:
 
     # Append to check_all.mcfunction
     with open(Path("output/wordlist/check_all.mcfunction"), "a") as f:
-        f.write(f"function wordlist:{id % 100}/check_word_{id}\n")
+        f.write(f"execute if score @s word_id matches -1 run function wordlist:{id % 100}/check_word_{id}\n")
 
 def generate_minecraft_wordlist() -> None:
     words.sort(key=lambda word: len(word))
