@@ -1,4 +1,4 @@
-item replace entity @s weapon.offhand with minecraft:air 
+item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick 
 item replace entity @s inventory.0 with minecraft:air 
 item replace entity @s inventory.1 with minecraft:air 
 item replace entity @s inventory.2 with minecraft:air 
@@ -26,6 +26,13 @@ item replace entity @s inventory.23 with minecraft:air
 item replace entity @s inventory.24 with minecraft:air 
 item replace entity @s inventory.25 with minecraft:air 
 item replace entity @s inventory.26 with minecraft:air 
+execute if score @s letter_inv0 matches -1 run item replace entity @s hotbar.0 with minecraft:air 
+execute if score @s letter_inv1 matches -1 run item replace entity @s hotbar.1 with minecraft:air 
+execute if score @s letter_inv2 matches -1 run item replace entity @s hotbar.2 with minecraft:air 
+execute if score @s letter_inv3 matches -1 run item replace entity @s hotbar.3 with minecraft:air 
+execute if score @s letter_inv4 matches -1 run item replace entity @s hotbar.4 with minecraft:air 
+execute if score @s letter_inv5 matches -1 run item replace entity @s hotbar.5 with minecraft:air 
+execute if score @s letter_inv6 matches -1 run item replace entity @s hotbar.6 with minecraft:air 
 execute if score @s letter_inv0 matches 0 run item replace entity @s hotbar.0 with minecraft:white_concrete_powder 
 execute if score @s letter_inv0 matches 1 run item replace entity @s hotbar.0 with minecraft:orange_concrete_powder 
 execute if score @s letter_inv0 matches 2 run item replace entity @s hotbar.0 with minecraft:magenta_concrete_powder 

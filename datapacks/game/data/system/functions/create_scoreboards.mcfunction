@@ -16,6 +16,8 @@ scoreboard objectives add current_round dummy
 scoreboard objectives add used_carrot_stick minecraft.used:minecraft.carrot_on_a_stick
 
 #Inventory
+scoreboard objectives add inventory dummy
+
 scoreboard objectives add letter_inv0 dummy
 scoreboard objectives add letter_inv1 dummy
 scoreboard objectives add letter_inv2 dummy
