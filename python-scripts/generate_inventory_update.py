@@ -21,7 +21,14 @@ def generate_inventory_update():
     # Hotbar (letters)
     for hotbar_slot in range(7):
         for id, letter in enumerate(letters):
-            output += f"execute if score @s letter_inv{hotbar_slot} matches {id} run item replace entity @s hotbar.{hotbar_slot} with {letter['block']} \n"
+            nbt = {
+                "display": {
+                                "Name": json.dumps({"text": f"Letter {letter['letter']}", "italic": False}),
+                                "Lore": [json.dumps({"text": f"Value: {letter['value']}", "italic": False})]
+                            }
+            }
+
+            output += f"execute if score @s letter_inv{hotbar_slot} matches {id} run item replace entity @s hotbar.{hotbar_slot} with {letter['block']}{json.dumps(nbt)} \n"
 
     with open(Path("output/inventory_update.mcfunction"), "w") as f:
         f.write(output)
