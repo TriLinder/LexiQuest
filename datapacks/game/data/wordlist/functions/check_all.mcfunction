@@ -1,4 +1,5 @@
 scoreboard players set @s word_id -1
+scoreboard players set @s word_direction -1
 execute if score @s word_id matches -1 run function wordlist:2/check_word_2
 execute if score @s word_id matches -1 run function wordlist:3/check_word_3
 execute if score @s word_id matches -1 run function wordlist:4/check_word_4

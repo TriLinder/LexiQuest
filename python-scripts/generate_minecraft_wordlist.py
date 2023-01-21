@@ -30,7 +30,7 @@ def generate_word(id: int, word: str) -> None:
     for x, block in enumerate(letter_blocks):
         output += f"if block ~{x - 1} ~ ~ {block} "
 
-    output += f"run scoreboard players set @s word_id {id}\n"
+    output += "run scoreboard players set @s word_direction 0\n"
 
     # Generate north
     output += f"\n#South (+z) direction\n"
@@ -39,7 +39,12 @@ def generate_word(id: int, word: str) -> None:
     for z, block in enumerate(letter_blocks):
         output += f"if block ~ ~ ~{z - 1} {block} "
 
-    output += f"run scoreboard players set @s word_id {id}"
+    output += "run scoreboard players set @s word_direction 1\n"
+
+    # Process the result
+    output += f"execute unless score @s word_direction matches -1 run scoreboard players set @s word_id {id}\n"
+    output += f"execute if score @s word_direction matches 0 run fill ~ ~-1 ~ ~{len(word) - 1} ~-1 ~ minecraft:blue_concrete\n"
+    output += f"execute if score @s word_direction matches 1 run fill ~ ~-1 ~ ~ ~-1 ~{len(word) - 1} minecraft:blue_concrete\n"
 
     # Write to file
     with open(Path(f"output/wordlist/{id % 100}/check_word_{id}.mcfunction"), "w") as f:
@@ -56,7 +61,10 @@ def generate_minecraft_wordlist() -> None:
         os.makedirs(Path(f"output/wordlist/{i}"), exist_ok=True)
 
     with open(Path("output/wordlist/check_all.mcfunction"), "w") as f:
-        f.write("scoreboard players set @s word_id -1\n")
+        output = "scoreboard players set @s word_id -1\n"
+        output += "scoreboard players set @s word_direction -1\n"
+        
+        f.write(output)
 
     for id, word in enumerate(words):
         if len(word) >= 2:

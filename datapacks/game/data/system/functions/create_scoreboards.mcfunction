@@ -2,6 +2,7 @@
 scoreboard objectives add state dummy
 scoreboard objectives add recursion_counter dummy
 
+scoreboard objectives add word_direction dummy
 scoreboard objectives add word_id dummy
 scoreboard objectives add prev_word_id dummy
 

@@ -13,7 +13,8 @@ def generate_board_reset(board_size: int) -> None:
 
     output += "\nscoreboard players set @e[tag=tile_marker] word_id -1\n"
     output += "scoreboard players set @e[tag=tile_marker] prev_word_id -1\n"
-    output += "execute as @e[tag=tile_marker] at @s run setblock ~ ~ ~ minecraft:purple_wool"
+    output += "execute as @e[tag=tile_marker] at @s run setblock ~ ~ ~ minecraft:purple_wool\n"
+    output += "execute as @e[tag=tile_marker] at @s run setblock ~ ~-1 ~ minecraft:black_concrete"
 
     with open(Path("output/board_reset.mcfunction"), "w") as f:
         f.write(output)
