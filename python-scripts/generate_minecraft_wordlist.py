@@ -10,64 +10,56 @@ with open(Path("assets/words.txt"), "r") as f:
     words = f.read().strip().split("\n")
 
 def generate_word(id: int, word: str) -> None:
-    word = word.upper()
-    letter_blocks = []
-    
-    letter_blocks.append("minecraft:purple_wool") # Empty character (a 'space')
+    word = word.lower()
 
-    for character in word:
-        letter = letters[string.ascii_uppercase.find(character)]
-        letter_blocks.append(letter["block"])
+    for i, character in enumerate(word):
+        is_last_character = i + 1 == len(word)
 
-    letter_blocks.append("minecraft:purple_wool") # Empty character (a 'space')
+        if not is_last_character: #Generate check for next character
+            next_character = word[i + 1]
+            next_letter = letters[string.ascii_lowercase.find(next_character)]
 
-    output = f"#Auto-generated check for: {word}\n"
-    
-    # Generate west
-    output += f"\n#East (+x) direction\n"
-    output += "execute "
+            directory = Path(f"output/wordlist/{'/'.join(word[:i+1])}") #Path to check.mcfunction directory
+            os.makedirs(directory, exist_ok=True)
 
-    for x, block in enumerate(letter_blocks):
-        output += f"if block ~{x - 1} ~ ~ {block} "
+            if not os.path.isdir(f"{directory}/{next_character}"): #If a check for this character doesn't yet exist
+                with open(Path(f"{directory}/check.mcfunction"), "a") as f:
+                    coordinates = [f"~{i + 1} ~ ~", f"~ ~ ~{i + 1}"] #Coordinates (directions) to check
 
-    output += "run scoreboard players set @s word_direction 0\n"
+                    for direction, coords in enumerate(coordinates):
+                        condition = f"execute if block {coords} {next_letter['block']}"
+                        
+                        f.write(f"{condition} run scoreboard players set @s word_direction {direction} \n")
+                        f.write(f"{condition} run function wordlist:{'/'.join(word[:i+2])}/check \n")
+        
+        else: #Word finished, set word id and fill blue concrete
+            directory = Path(f"output/wordlist/{'/'.join(word[:i+1])}")
+            os.makedirs(directory, exist_ok=True)
 
-    # Generate north
-    output += f"\n#South (+z) direction\n"
-    output += "execute "
+            with open(Path(f"{directory}/check.mcfunction"), "a") as f:
+                f.write(f"scoreboard players set @s word_id {id} \n")
 
-    for z, block in enumerate(letter_blocks):
-        output += f"if block ~ ~ ~{z - 1} {block} "
-
-    output += "run scoreboard players set @s word_direction 1\n"
-
-    # Process the result
-    output += f"execute unless score @s word_direction matches -1 run scoreboard players set @s word_id {id}\n"
-    output += f"execute if score @s word_direction matches 0 run fill ~ ~-1 ~ ~{len(word) - 1} ~-1 ~ minecraft:blue_concrete\n"
-    output += f"execute if score @s word_direction matches 1 run fill ~ ~-1 ~ ~ ~-1 ~{len(word) - 1} minecraft:blue_concrete\n"
-
-    # Write to file
-    with open(Path(f"output/wordlist/{id % 100}/check_word_{id}.mcfunction"), "w") as f:
-        f.write(output)
-
-    # Append to check_all.mcfunction
-    with open(Path("output/wordlist/check_all.mcfunction"), "a") as f:
-        f.write(f"execute if score @s word_id matches -1 run function wordlist:{id % 100}/check_word_{id}\n")
+                coordinates = [f"~{len(word) - 1} ~-1 ~", f"~ ~-1 ~{len(word) - 1}"] #Coordinates (directions) to fill
+                
+                for direction, coords in enumerate(coordinates):
+                    f.write(f"execute if score @s word_direction matches {direction} run fill ~ ~-1 ~ {coords} minecraft:blue_concrete \n")
 
 def generate_minecraft_wordlist() -> None:
     words.sort(key=lambda word: len(word))
-    
-    for i in range(100):
-        os.makedirs(Path(f"output/wordlist/{i}"), exist_ok=True)
 
     with open(Path("output/wordlist/check_all.mcfunction"), "w") as f:
         output = "scoreboard players set @s word_id -1\n"
         output += "scoreboard players set @s word_direction -1\n"
+
+        for letter in letters: #Inital check for all letters
+            output += f"execute if block ~ ~ ~ {letter['block']} run function wordlist:{letter['letter'].lower()}/check \n"
         
         f.write(output)
 
     for id, word in enumerate(words):
-        if len(word) >= 2:
+        if len(word) >= 2 and word.isalpha():
+            print(f"{id} / {len(words)}")
+            
             generate_word(id, word)
 
 if __name__ == "__main__":
