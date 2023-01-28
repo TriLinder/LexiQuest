@@ -6,6 +6,16 @@ scoreboard objectives add recursion_counter dummy
 scoreboard objectives add numerals dummy
 bossbar add bar ""
 
+#Color teams
+team add red
+team modify red color red
+
+team add green
+team modify green color green
+
+team add blue
+team modify blue color blue
+
 #Turns
 scoreboard objectives add turn_order dummy
 
