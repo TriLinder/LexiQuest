@@ -10,6 +10,7 @@ def generate_inventory_update():
     # Off-hand
     nbt = {
                 "CustomModelData": 1,
+                "Action": 0,
                 "display": {
                                 "Name": json.dumps({"text": ""}),
                             }
@@ -40,6 +41,7 @@ def generate_inventory_update():
     # Hotbar (buttons)
     nbt = {
                 "CustomModelData": 4,
+                "Action": 3,
                 "display": {
                                 "Name": json.dumps({"text": "Swap letters", "italic": False}),
                                 "Lore": [json.dumps({"text": "PLACEHOLDER TEXT", "italic": False})]
@@ -52,6 +54,7 @@ def generate_inventory_update():
 
     nbt = {
                 "CustomModelData": 2,
+                "Action": 1,
                 "display": {
                                 "Name": json.dumps({"text": "Play", "italic": False}),
                                 "Lore": [json.dumps({"text": "PLACEHOLDER TEXT", "italic": False})]
@@ -63,6 +66,7 @@ def generate_inventory_update():
 
     nbt = {
                 "CustomModelData": 3,
+                "Action": 2,
                 "display": {
                                 "Name": json.dumps({"text": "Pass round", "italic": False}),
                                 "Lore": [json.dumps({"text": "PLACEHOLDER TEXT", "italic": False})]
