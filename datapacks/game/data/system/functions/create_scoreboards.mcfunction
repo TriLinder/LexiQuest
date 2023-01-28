@@ -4,6 +4,7 @@ scoreboard objectives add recursion_counter dummy
 
 #Misc
 scoreboard objectives add numerals dummy
+bossbar add bar ""
 
 #Board
 scoreboard objectives add word_direction dummy
