@@ -1,4 +1,4 @@
-item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick 
+item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick{"CustomModelData": 1, "display": {"Name": "{\"text\": \"\"}"}} 
 item replace entity @s inventory.0 with minecraft:air 
 item replace entity @s inventory.1 with minecraft:air 
 item replace entity @s inventory.2 with minecraft:air 
@@ -215,3 +215,11 @@ execute if score @s letter_inv6 matches 22 run item replace entity @s hotbar.6 w
 execute if score @s letter_inv6 matches 23 run item replace entity @s hotbar.6 with minecraft:gray_wool{"display": {"Name": "{\"text\": \"Letter X\", \"italic\": false}", "Lore": ["{\"text\": \"Value: 8\", \"italic\": false}"]}} 
 execute if score @s letter_inv6 matches 24 run item replace entity @s hotbar.6 with minecraft:light_gray_wool{"display": {"Name": "{\"text\": \"Letter Y\", \"italic\": false}", "Lore": ["{\"text\": \"Value: 4\", \"italic\": false}"]}} 
 execute if score @s letter_inv6 matches 25 run item replace entity @s hotbar.6 with minecraft:cyan_wool{"display": {"Name": "{\"text\": \"Letter Z\", \"italic\": false}", "Lore": ["{\"text\": \"Value: 10\", \"italic\": false}"]}} 
+execute if entity @s[tag=current_player] if score state current_round matches 0 run item replace entity @s hotbar.7 with minecraft:carrot_on_a_stick{"CustomModelData": 4, "display": {"Name": "{\"text\": \"Swap letters\", \"italic\": false}", "Lore": ["{\"text\": \"PLACEHOLDER TEXT\", \"italic\": false}"]}} 
+execute unless score state current_round matches 0 run item replace entity @s hotbar.7 with minecraft:air 
+execute unless entity @s[tag=current_player] run item replace entity @s hotbar.7 with minecraft:air 
+execute if entity @s[tag=current_player] if score state current_round matches 1 run item replace entity @s hotbar.8 with minecraft:carrot_on_a_stick{"CustomModelData": 2, "display": {"Name": "{\"text\": \"Play\", \"italic\": false}", "Lore": ["{\"text\": \"PLACEHOLDER TEXT\", \"italic\": false}"]}} 
+execute unless entity @s[tag=current_player] run item replace entity @s hotbar.8 with minecraft:air 
+execute if entity @s[tag=current_player] if score state current_round matches 0 run item replace entity @s hotbar.8 with minecraft:carrot_on_a_stick{"CustomModelData": 3, "display": {"Name": "{\"text\": \"Pass round\", \"italic\": false}", "Lore": ["{\"text\": \"PLACEHOLDER TEXT\", \"italic\": false}"]}} 
+execute unless entity @s[tag=current_player] run item replace entity @s hotbar.8 with minecraft:air 
+execute if score state current_round matches 2 run item replace entity @s hotbar.8 with minecraft:air 
