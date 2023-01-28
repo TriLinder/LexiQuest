@@ -16,7 +16,8 @@ def generate_inventory_update():
                             }
             }
 
-    output += f"item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick{json.dumps(nbt)} \n"
+    output += f"execute if entity @s[tag=current_player] run item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick{json.dumps(nbt)} \n"
+    output += f"execute unless entity @s[tag=current_player] run item replace entity @s weapon.offhand with minecraft:air \n"
 
     # Inventory
     for inventory_slot in range(27):
@@ -68,7 +69,7 @@ def generate_inventory_update():
                 "CustomModelData": 3,
                 "Action": 2,
                 "display": {
-                                "Name": json.dumps({"text": "Pass round", "italic": False}),
+                                "Name": json.dumps({"text": "Pass turn", "italic": False}),
                                 "Lore": [json.dumps({"text": "PLACEHOLDER TEXT", "italic": False})]
                             }
             }

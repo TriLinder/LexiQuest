@@ -6,6 +6,9 @@ scoreboard objectives add recursion_counter dummy
 scoreboard objectives add numerals dummy
 bossbar add bar ""
 
+#Turns
+scoreboard objectives add turn_order dummy
+
 #Board
 scoreboard objectives add word_direction dummy
 scoreboard objectives add word_id dummy

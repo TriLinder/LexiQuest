@@ -1,4 +1,5 @@
-item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick{"CustomModelData": 1, "Action": 0, "display": {"Name": "{\"text\": \"\"}"}} 
+execute if entity @s[tag=current_player] run item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick{"CustomModelData": 1, "Action": 0, "display": {"Name": "{\"text\": \"\"}"}} 
+execute unless entity @s[tag=current_player] run item replace entity @s weapon.offhand with minecraft:air 
 item replace entity @s inventory.0 with minecraft:air 
 item replace entity @s inventory.1 with minecraft:air 
 item replace entity @s inventory.2 with minecraft:air 
@@ -220,6 +221,6 @@ execute unless score state current_round matches 0 run item replace entity @s ho
 execute unless entity @s[tag=current_player] run item replace entity @s hotbar.7 with minecraft:air 
 execute if entity @s[tag=current_player] if score state current_round matches 1 run item replace entity @s hotbar.8 with minecraft:carrot_on_a_stick{"CustomModelData": 2, "Action": 1, "display": {"Name": "{\"text\": \"Play\", \"italic\": false}", "Lore": ["{\"text\": \"PLACEHOLDER TEXT\", \"italic\": false}"]}} 
 execute unless entity @s[tag=current_player] run item replace entity @s hotbar.8 with minecraft:air 
-execute if entity @s[tag=current_player] if score state current_round matches 0 run item replace entity @s hotbar.8 with minecraft:carrot_on_a_stick{"CustomModelData": 3, "Action": 2, "display": {"Name": "{\"text\": \"Pass round\", \"italic\": false}", "Lore": ["{\"text\": \"PLACEHOLDER TEXT\", \"italic\": false}"]}} 
+execute if entity @s[tag=current_player] if score state current_round matches 0 run item replace entity @s hotbar.8 with minecraft:carrot_on_a_stick{"CustomModelData": 3, "Action": 2, "display": {"Name": "{\"text\": \"Pass turn\", \"italic\": false}", "Lore": ["{\"text\": \"PLACEHOLDER TEXT\", \"italic\": false}"]}} 
 execute unless entity @s[tag=current_player] run item replace entity @s hotbar.8 with minecraft:air 
 execute if score state current_round matches 2 run item replace entity @s hotbar.8 with minecraft:air 
