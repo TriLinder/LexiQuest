@@ -31,6 +31,7 @@ def generate_inventory_update():
     for hotbar_slot in range(7):
         for id, letter in enumerate(letters):
             nbt = {
+                "IsLetter": True,
                 "display": {
                                 "Name": json.dumps({"text": f"Letter {letter['letter']}", "italic": False}),
                                 "Lore": [json.dumps({"text": f"Value: {letter['value']}", "italic": False})]
@@ -46,9 +47,9 @@ def generate_inventory_update():
     output += "scoreboard players set has_play_button hotbar_buttons 0 \n"
     output += "scoreboard players set has_pass_button hotbar_buttons 0 \n"
 
-    output += "execute if entity @s[tag=current_player] if score state current_round matches 0 run scoreboard players set has_swap_button hotbar_buttons 1 \n"
-    output += "execute if entity @s[tag=current_player] if score state current_round matches 1 run scoreboard players set has_play_button hotbar_buttons 1 \n"
-    output += "execute if entity @s[tag=current_player] if score state current_round matches 0 run scoreboard players set has_pass_button hotbar_buttons 1 \n"
+    output += "execute if entity @s[tag=current_player] unless entity @s[tag=swapping_letters] if score state current_round matches 0 run scoreboard players set has_swap_button hotbar_buttons 1 \n"
+    output += "execute if entity @s[tag=current_player] unless entity @s[tag=swapping_letters] if score state current_round matches 1 run scoreboard players set has_play_button hotbar_buttons 1 \n"
+    output += "execute if entity @s[tag=current_player] unless entity @s[tag=swapping_letters] if score state current_round matches 0 run scoreboard players set has_pass_button hotbar_buttons 1 \n"
 
     #Swap letters button
     nbt = {

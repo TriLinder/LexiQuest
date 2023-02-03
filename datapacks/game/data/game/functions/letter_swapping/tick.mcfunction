@@ -1,0 +1,1 @@
+execute if score @s dropped_item matches 1.. run function game:inventory/clear_selected_slot

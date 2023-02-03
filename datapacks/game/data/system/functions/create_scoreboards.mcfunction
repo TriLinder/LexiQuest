@@ -27,7 +27,9 @@ scoreboard objectives add prev_word_id dummy
 scoreboard objectives add tile_value dummy
 scoreboard objectives add current_round dummy
 
+#Item using
 scoreboard objectives add used_carrot_stick minecraft.used:minecraft.carrot_on_a_stick
+scoreboard objectives add dropped_item minecraft.custom:minecraft.drop
 
 #Inventory
 scoreboard objectives add inventory dummy
