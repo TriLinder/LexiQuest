@@ -1,3 +1,5 @@
+title @a actionbar ""
+
 function game:tile_placing/tick
 function game:hotbar_buttons/tick
 execute as @a[tag=swapping_letters, limit=1] run function game:letter_swapping/tick
