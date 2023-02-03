@@ -39,3 +39,6 @@ scoreboard objectives add letter_inv3 dummy
 scoreboard objectives add letter_inv4 dummy
 scoreboard objectives add letter_inv5 dummy
 scoreboard objectives add letter_inv6 dummy
+
+#Hotbar buttons
+scoreboard objectives add hotbar_buttons dummy
