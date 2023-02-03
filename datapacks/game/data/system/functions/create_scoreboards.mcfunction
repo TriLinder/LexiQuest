@@ -37,6 +37,9 @@ scoreboard objectives add trigger trigger
 scoreboard objectives add used_carrot_stick minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add dropped_item minecraft.custom:minecraft.drop
 
+#Letter bag
+scoreboard objectives add letter_bag dummy
+
 #Inventory
 scoreboard objectives add inventory dummy
 

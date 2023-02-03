@@ -1,2 +1,2 @@
-loot insert 0 64 0 loot game:get_letter
-function game:inventory/give_letter_from_container
+execute if score letters_left letter_bag matches 1.. run function game:inventory/force_new_letter
+scoreboard players remove letters_left letter_bag 1
