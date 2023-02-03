@@ -49,7 +49,7 @@ def generate_inventory_update():
 
     output += "execute if entity @s[tag=current_player] unless entity @s[tag=swapping_letters] if score state current_round matches 0 run scoreboard players set has_swap_button hotbar_buttons 1 \n"
     output += "execute if entity @s[tag=current_player] unless entity @s[tag=swapping_letters] if score state current_round matches 1 run scoreboard players set has_play_button hotbar_buttons 1 \n"
-    output += "execute if entity @s[tag=current_player] unless entity @s[tag=swapping_letters] if score state current_round matches 0 run scoreboard players set has_pass_button hotbar_buttons 1 \n"
+    output += "execute if entity @s[tag=current_player] if score state current_round matches 0 run scoreboard players set has_pass_button hotbar_buttons 1 \n"
 
     #Swap letters button
     nbt = {

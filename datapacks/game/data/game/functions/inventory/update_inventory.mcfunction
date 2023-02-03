@@ -221,7 +221,7 @@ scoreboard players set has_play_button hotbar_buttons 0
 scoreboard players set has_pass_button hotbar_buttons 0 
 execute if entity @s[tag=current_player] unless entity @s[tag=swapping_letters] if score state current_round matches 0 run scoreboard players set has_swap_button hotbar_buttons 1 
 execute if entity @s[tag=current_player] unless entity @s[tag=swapping_letters] if score state current_round matches 1 run scoreboard players set has_play_button hotbar_buttons 1 
-execute if entity @s[tag=current_player] unless entity @s[tag=swapping_letters] if score state current_round matches 0 run scoreboard players set has_pass_button hotbar_buttons 1 
+execute if entity @s[tag=current_player] if score state current_round matches 0 run scoreboard players set has_pass_button hotbar_buttons 1 
 execute if score has_swap_button hotbar_buttons matches 1 run item replace entity @s hotbar.7 with minecraft:carrot_on_a_stick{"CustomModelData": 4, "Action": 3, "display": {"Name": "{\"text\": \"Swap letters\", \"italic\": false}", "Lore": ["{\"text\": \"PLACEHOLDER TEXT\", \"italic\": false}"]}} 
 execute if score has_swap_button hotbar_buttons matches 0 run item replace entity @s hotbar.7 with minecraft:air 
 execute if score has_play_button hotbar_buttons matches 1 run item replace entity @s hotbar.8 with minecraft:carrot_on_a_stick{"CustomModelData": 2, "Action": 1, "display": {"Name": "{\"text\": \"Play\", \"italic\": false}", "Lore": ["{\"text\": \"PLACEHOLDER TEXT\", \"italic\": false}"]}} 
