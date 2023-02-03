@@ -1,0 +1,1 @@
+execute as @e[tag=letters_in_bag_counter] at @s run data merge block ~ ~ ~ {Text1:'{"text":""}',Text2:'{"text":"Letters in bag:","color":"aqua"}',Text3:'{"score":{"name":"letters_in_bag","objective":"configuration"},"bold":true,"color":"gold"}'}

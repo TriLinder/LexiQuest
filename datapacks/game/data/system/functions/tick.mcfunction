@@ -1,4 +1,5 @@
 scoreboard players add tick_counter numerals 1
+execute store result score player_count state run execute if entity @a
 
 # States
 # 0 = LOBBY
