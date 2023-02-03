@@ -44,10 +44,12 @@ def generate_inventory_update():
 
     #Check if ** executing ** player should have access to buttons
     output += "scoreboard players set has_swap_button hotbar_buttons 0 \n"
+    output += "scoreboard players set has_end_button hotbar_buttons 0 \n"
     output += "scoreboard players set has_play_button hotbar_buttons 0 \n"
     output += "scoreboard players set has_pass_button hotbar_buttons 0 \n"
 
-    output += "execute if entity @s[tag=current_player] unless entity @s[tag=swapping_letters] if score state current_round matches 0 run scoreboard players set has_swap_button hotbar_buttons 1 \n"
+    output += "execute if entity @s[tag=current_player] unless entity @s[tag=swapping_letters] if score state current_round matches 0 if score letters_left letter_bag matches 1.. run scoreboard players set has_swap_button hotbar_buttons 1 \n"
+    output += "execute if entity @s[tag=current_player] unless entity @s[tag=swapping_letters] if score state current_round matches 0 unless score letters_left letter_bag matches 1.. run scoreboard players set has_end_button hotbar_buttons 1 \n"
     output += "execute if entity @s[tag=current_player] unless entity @s[tag=swapping_letters] if score state current_round matches 1 run scoreboard players set has_play_button hotbar_buttons 1 \n"
     output += "execute if entity @s[tag=current_player] if score state current_round matches 0 run scoreboard players set has_pass_button hotbar_buttons 1 \n"
 
@@ -62,9 +64,21 @@ def generate_inventory_update():
             }
 
     output += f"execute if score has_swap_button hotbar_buttons matches 1 run item replace entity @s hotbar.7 with minecraft:carrot_on_a_stick{json.dumps(nbt)} \n"
+
+    #End game button
+    nbt = {
+                "CustomModelData": 5,
+                "Action": 4,
+                "display": {
+                                "Name": json.dumps({"text": "End the Game", "italic": False}),
+                                "Lore": [json.dumps({"text": "PLACEHOLDER TEXT", "italic": False})]
+                            }
+            }
+
+    output += f"execute if score has_end_button hotbar_buttons matches 1 run item replace entity @s hotbar.7 with minecraft:carrot_on_a_stick{json.dumps(nbt)} \n"
     
-    #Clear the swap slot
-    output += f"execute if score has_swap_button hotbar_buttons matches 0 run item replace entity @s hotbar.7 with minecraft:air \n"
+    #Clear the swap / end slot
+    output += f"execute if score has_swap_button hotbar_buttons matches 0 if score has_end_button hotbar_buttons matches 0 run item replace entity @s hotbar.7 with minecraft:air \n"
 
     #Play button
     nbt = {

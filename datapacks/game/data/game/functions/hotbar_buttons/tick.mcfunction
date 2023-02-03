@@ -6,3 +6,6 @@ execute as @a[scores={used_carrot_stick=1..}, nbt={SelectedItem: {tag: {Action: 
 
 #Detect 'swap letters' click
 execute as @a[scores={used_carrot_stick=1..}, nbt={SelectedItem: {tag: {Action: 3}}}] run tag @s add swapping_letters
+
+#Detect 'end game' click
+execute as @a[scores={used_carrot_stick=1..}, nbt={SelectedItem: {tag: {Action: 4}}}] run function game:end_game
