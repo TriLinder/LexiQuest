@@ -28,8 +28,11 @@ scoreboard objectives add word_direction dummy
 scoreboard objectives add word_id dummy
 scoreboard objectives add prev_word_id dummy
 
-scoreboard objectives add tile_value dummy
 scoreboard objectives add current_round dummy
+
+#Scoring
+scoreboard objectives add tile_value dummy
+scoreboard objectives add score dummy
 
 #Interaction
 scoreboard objectives add trigger trigger
