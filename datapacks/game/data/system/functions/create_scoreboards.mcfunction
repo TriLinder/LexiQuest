@@ -24,6 +24,8 @@ team modify blue color blue
 scoreboard objectives add turn_order dummy
 
 #Board
+scoreboard objectives add tile_type dummy
+
 scoreboard objectives add word_direction dummy
 scoreboard objectives add word_id dummy
 scoreboard objectives add prev_word_id dummy

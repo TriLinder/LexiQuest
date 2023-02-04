@@ -678,7 +678,7 @@ summon minecraft:marker 25 128 24 {"Tags": ["tile_marker"]}
 summon minecraft:marker 25 128 25 {"Tags": ["tile_marker"]} 
 scoreboard players set @e[tag=tile_marker] word_id -1 
 scoreboard players set @e[tag=tile_marker] prev_word_id -1 
-execute as @e[tag=tile_marker] at @s run setblock ~ ~ ~ minecraft:purple_wool 
 execute as @e[tag=tile_marker] at @s run setblock ~ ~-1 ~ minecraft:black_concrete 
 execute as @e[tag=tile_marker] at @s run fill ~ ~-2 ~ ~ ~-12 ~ minecraft:air 
+function game:board/assign_tile_types 
 function game:board/update_glowing 
