@@ -18,4 +18,4 @@ execute as @e[tag=tile_type_not_assigned, limit=15, sort=random] run scoreboard 
 execute as @e[tag=tile_type_not_assigned] if score @s tile_type matches 4 run tag @s remove tile_type_not_assigned
 
 tag @e remove tile_type_not_assigned
-function game:board/reset_tile
+execute as @e[tag=tile_marker] at @s run function game:board/reset_tile
