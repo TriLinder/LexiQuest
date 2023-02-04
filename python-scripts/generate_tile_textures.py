@@ -5,7 +5,7 @@ from pathlib import Path
 with open("letters.json", "r") as f:
     letters = json.load(f)["letters"]
 
-def generate_letter(data: dict) -> None:
+def generate_letter_texture(data: dict) -> None:
     letter = data["letter"]
     value = data["value"]
     block = data["block"]
@@ -22,11 +22,11 @@ def generate_letter(data: dict) -> None:
     # Draw value
     draw.text((image.width, image.width), str(value), align="center", fill=(42, 42, 42), anchor="rd", font=font_smaller)
 
-    image.save(Path(f"output/letter_textures/{block[10:]}.png"), quality=100)
+    image.save(Path(f"output/tile_textures/{block[10:]}.png"), quality=100)
 
-def generate_letter_textures() -> None:
+def generate_tile_textures() -> None:
     for data in letters:
-        generate_letter(data)
+        generate_letter_texture(data)
 
 if __name__ == "__main__":
-    generate_letter_textures()
+    generate_tile_textures()
