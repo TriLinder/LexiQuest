@@ -1,3 +1,0 @@
-scoreboard players set @s word_id 12774 
-execute if score @s word_direction matches 0 run fill ~ ~-1 ~ ~14 ~-1 ~ minecraft:blue_concrete 
-execute if score @s word_direction matches 1 run fill ~ ~-1 ~ ~ ~-1 ~14 minecraft:blue_concrete 

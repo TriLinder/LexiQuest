@@ -1,5 +1,8 @@
-scoreboard players set @s word_id -1
-scoreboard players set @s word_direction -1
+scoreboard players set @s word_direction -1 
+scoreboard players set @e[tag=tile_marker] starts_with_space 0 
+scoreboard players set @s word_id -1 
+scoreboard players set @s word_id_right -1 
+scoreboard players set @s word_id_down -1 
 execute if block ~ ~ ~ minecraft:white_concrete_powder run function wordlist:a/check 
 execute if block ~ ~ ~ minecraft:orange_concrete_powder run function wordlist:b/check 
 execute if block ~ ~ ~ minecraft:magenta_concrete_powder run function wordlist:c/check 

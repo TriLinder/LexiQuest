@@ -17,6 +17,14 @@
 | 03  | DOUBLE WORD SCORE   | minecraft:green_wool  |
 | 04  | TRIPLE WORD SCORE   | minecraft:red_wool    |
 
+## Word directions
+
+| #   | DIRECTION                |
+|:---:|:------------------------:|
+| -01 | NONE (NOT A WORD HEADER) |
+| 00  | RIGHT (+X)               |
+| 01  | DOWN (+Z)                |
+
 ## Carrot on a Stick Actions
 
 | #   | ACTION       |

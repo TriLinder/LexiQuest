@@ -25,12 +25,19 @@ scoreboard objectives add turn_order dummy
 
 #Board
 scoreboard objectives add tile_type dummy
-
-scoreboard objectives add word_direction dummy
-scoreboard objectives add word_id dummy
-scoreboard objectives add prev_word_id dummy
-
 scoreboard objectives add current_round dummy
+
+#Word detection
+scoreboard objectives add word_direction dummy
+scoreboard objectives add starts_with_space dummy
+
+scoreboard objectives add word_id dummy
+scoreboard objectives add word_id_right dummy
+scoreboard objectives add word_id_down dummy
+
+scoreboard objectives add prev_word_id dummy
+scoreboard objectives add prev_word_id_right dummy
+scoreboard objectives add prev_word_id_down dummy
 
 #Scoring
 scoreboard objectives add tile_value dummy
