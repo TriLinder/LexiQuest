@@ -14,8 +14,8 @@
 | 00  | REGULAR             | minecraft:purple_wool |
 | 01  | DOUBLE LETTER SCORE | minecraft:black_wool  |
 | 02  | TRIPLE LETTER SCORE | minecraft:brown_wool  |
-| 03  | DOUBLE WORD SCORE   | minecraft:green_wool  |
-| 04  | TRIPLE WORD SCORE   | minecraft:red_wool    |
+| 03  | +3 POINTS           | minecraft:green_wool  |
+| 04  | +8 POINTS           | minecraft:red_wool    |
 
 ## Word directions
 

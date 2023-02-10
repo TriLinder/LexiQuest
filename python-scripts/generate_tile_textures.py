@@ -49,8 +49,8 @@ def generate_tile_textures() -> None:
     generate_special_tile("2L", (75, 140, 235), "black_wool")
     generate_special_tile("3L", (235, 155, 75), "brown_wool")
 
-    generate_special_tile("2W", (123, 240, 75), "green_wool")
-    generate_special_tile("3W", (235, 88, 75), "red_wool")
+    generate_special_tile("+3", (123, 240, 75), "green_wool")
+    generate_special_tile("+8", (235, 88, 75), "red_wool")
 
 if __name__ == "__main__":
     generate_tile_textures()
