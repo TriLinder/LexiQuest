@@ -13,7 +13,7 @@ def generate_letter_texture(data: dict) -> None:
     font_large = ImageFont.truetype(str(Path("assets/font.otf")), 64)
     font_smaller = ImageFont.truetype(str(Path("assets/font.otf")), 42)
 
-    image = Image.new("RGB", (128, 128), color=(255, 255, 255))
+    image = Image.new("RGB", (128, 128), color=(250, 250, 250))
     draw = ImageDraw.Draw(image)
 
     # Draw main letter
