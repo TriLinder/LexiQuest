@@ -14,6 +14,9 @@ def generate_get_tile_value() -> None:
     output += "execute if score @s tile_type matches 1 run scoreboard players operation @s tile_value *= 2 numerals \n" #Double letter score
     output += "execute if score @s tile_type matches 2 run scoreboard players operation @s tile_value *= 3 numerals \n" #Triple letter score
 
+    output += "execute if score @s tile_type matches 3 run scoreboard players add @s tile_value 3 \n" #Three point bonus
+    output += "execute if score @s tile_type matches 4 run scoreboard players add @s tile_value 8 \n" #Eight point bonus
+
     with open(Path("output/get_tile_value.mcfunction"), "w") as f:
         f.write(output)
 

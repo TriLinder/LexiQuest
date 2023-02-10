@@ -26,3 +26,5 @@ execute if block ~ ~ ~ minecraft:light_gray_wool run scoreboard players set @s t
 execute if block ~ ~ ~ minecraft:cyan_wool run scoreboard players set @s tile_value 10 
 execute if score @s tile_type matches 1 run scoreboard players operation @s tile_value *= 2 numerals 
 execute if score @s tile_type matches 2 run scoreboard players operation @s tile_value *= 3 numerals 
+execute if score @s tile_type matches 3 run scoreboard players add @s tile_value 3 
+execute if score @s tile_type matches 4 run scoreboard players add @s tile_value 8 
