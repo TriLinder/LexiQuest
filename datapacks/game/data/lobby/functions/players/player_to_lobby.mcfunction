@@ -12,5 +12,5 @@ title @s actionbar ""
 xp set @s 0 levels
 xp set @s 0 points
 
-tp @s 86 108 7 -90 0
-spawnpoint @s 86 108 7
+tp @s 58.5 131 44.5 0 0
+spawnpoint @s 58 131 44
