@@ -45,6 +45,7 @@ def generate_tile_textures() -> None:
         generate_letter_texture(data)
 
     generate_special_tile("", (250, 250, 250), "purple_wool")
+    generate_special_tile("+", (240, 190, 75), "blue_wool")
 
     generate_special_tile("2L", (75, 140, 235), "black_wool")
     generate_special_tile("3L", (235, 155, 75), "brown_wool")

@@ -2,6 +2,7 @@ scoreboard players add tile_place recursion_counter 1
 
 #Check if in a block
 execute if block ~ ~ ~ minecraft:purple_wool run scoreboard players set tile_place recursion_counter 9999
+execute if block ~ ~ ~ minecraft:blue_wool run scoreboard players set tile_place recursion_counter 9999
 execute if block ~ ~ ~ minecraft:black_wool run scoreboard players set tile_place recursion_counter 9999
 execute if block ~ ~ ~ minecraft:brown_wool run scoreboard players set tile_place recursion_counter 9999
 execute if block ~ ~ ~ minecraft:green_wool run scoreboard players set tile_place recursion_counter 9999
@@ -37,6 +38,7 @@ execute if block ~ ~ ~ minecraft:cyan_wool run scoreboard players set tile_place
 #Place or destroy a tile, then update the board
 execute if score tile_place recursion_counter matches 9999 unless block ~ ~ ~ minecraft:purple_wool run function game:tile_placing/destroy_tile
 execute if score tile_place recursion_counter matches 9999 if block ~ ~ ~ minecraft:purple_wool unless block ~ ~-2 ~ minecraft:red_concrete run function game:tile_placing/set_selected_block
+execute if score tile_place recursion_counter matches 9999 if block ~ ~ ~ minecraft:blue_wool unless block ~ ~-2 ~ minecraft:red_concrete run function game:tile_placing/set_selected_block
 execute if score tile_place recursion_counter matches 9999 if block ~ ~ ~ minecraft:black_wool unless block ~ ~-2 ~ minecraft:red_concrete run function game:tile_placing/set_selected_block
 execute if score tile_place recursion_counter matches 9999 if block ~ ~ ~ minecraft:brown_wool unless block ~ ~-2 ~ minecraft:red_concrete run function game:tile_placing/set_selected_block
 execute if score tile_place recursion_counter matches 9999 if block ~ ~ ~ minecraft:green_wool unless block ~ ~-2 ~ minecraft:red_concrete run function game:tile_placing/set_selected_block
