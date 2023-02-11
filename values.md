@@ -2,10 +2,11 @@
 
 ## States
 
-| #   | STATE   |
-|:---:|:-------:|
-| 00  | LOBBY   |
-| 01  | IN GAME |
+| #   | STATE        |
+|:---:|:------------:|
+| 00  | LOBBY        |
+| 01  | IN GAME      |
+| 02  | WINNER STAGE |
 
 ## Tile types
 
