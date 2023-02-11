@@ -1,10 +1,15 @@
+#Players
 function winner_stage:find_winner
-function winner_stage:announce_winner
 execute as @a at @s run function winner_stage:players/player_teleport_to_stage
 
+#System
 function game:board/reset
-
 scoreboard players set state state 2
-bossbar set minecraft:bar visible true
 
+#Reset counter
 scoreboard players set counter winner_stage 0
+
+#Bossbar
+bossbar set minecraft:bar visible true
+bossbar set minecraft:bar name ["",{"selector":"@a[tag=winner]"},{"text":" won the game!"}]
+bossbar set minecraft:bar color green
