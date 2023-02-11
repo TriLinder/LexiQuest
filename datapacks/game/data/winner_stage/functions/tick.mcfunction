@@ -4,5 +4,5 @@ execute if score %40_counter winner_stage matches 0 run function winner_stage:sp
 
 execute if score counter winner_stage matches 240 run function winner_stage:end_stage
 
-execute as @a at @s run function winner_stage:players/update_inventory
+execute as @a[tag=!no_inventory_update] run function winner_stage:players/update_inventory
 kill @e[type=item]

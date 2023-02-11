@@ -4,4 +4,4 @@ effect give @a minecraft:resistance 1000000 255 true
 
 effect give @a[tag=winner] minecraft:glowing 1000000 255 true
 
-execute as @a run function lobby:players/update_inventory
+execute as @a[tag=!no_inventory_update] run function lobby:players/update_inventory
