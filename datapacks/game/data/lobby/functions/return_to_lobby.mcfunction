@@ -1,5 +1,6 @@
 execute as @a at @s run function lobby:players/player_to_lobby
 
+kill @e[type=firework_rocket]
 function game:board/reset
 
 scoreboard players set state state 0

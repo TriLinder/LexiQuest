@@ -1,2 +1,2 @@
 execute as @a at @s run function effects:hud/scene_transition
-schedule function lobby:return_to_lobby 10t
+schedule function winner_stage:start_stage 10t
