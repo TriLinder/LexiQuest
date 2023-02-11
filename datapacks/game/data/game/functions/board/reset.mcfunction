@@ -364,7 +364,7 @@ summon minecraft:marker 13 128 9 {"Tags": ["tile_marker"]}
 summon minecraft:marker 13 128 10 {"Tags": ["tile_marker"]} 
 summon minecraft:marker 13 128 11 {"Tags": ["tile_marker"]} 
 summon minecraft:marker 13 128 12 {"Tags": ["tile_marker"]} 
-summon minecraft:marker 13 128 13 {"Tags": ["tile_marker"]} 
+summon minecraft:marker 13 128 13 {"Tags": ["tile_marker", "center_tile"]} 
 summon minecraft:marker 13 128 14 {"Tags": ["tile_marker"]} 
 summon minecraft:marker 13 128 15 {"Tags": ["tile_marker"]} 
 summon minecraft:marker 13 128 16 {"Tags": ["tile_marker"]} 

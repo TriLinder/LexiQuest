@@ -10,8 +10,9 @@ title @s actionbar ""
 xp set @s 0 levels
 xp set @s 0 points
 
-tp @s 11 130 11 -90 0
-spawnpoint @s 11 130 11
+execute at @e[tag=center_tile, limit=1] run spreadplayers ~ ~ 12 12 false @s
+execute at @s facing entity @e[tag=center_tile, limit=1] eyes run tp @s ~ 129 ~ ~ 0
+execute at @e[tag=center_tile, limit=1] run spawnpoint @s ~ 1 ~
 
 scoreboard players set @s score 0
 
