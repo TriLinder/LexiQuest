@@ -1,0 +1,1 @@
+function winner_stage:players/player_teleport_to_stage
