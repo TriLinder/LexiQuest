@@ -5,8 +5,8 @@ def generate_board_reset(board_size: int) -> None:
     output = f"fill 0 128 0 {board_size} 128 {board_size} air \n"
     output += "kill @e[tag=tile_marker] \n"
 
-    for x in range(board_size):
-        for y in range(board_size):
+    for x in range(board_size + 1):
+        for y in range(board_size + 1):
             nbt = {"Tags": ["tile_marker"]}
 
             output += f'summon minecraft:marker {x} 128 {y} {json.dumps(nbt)} \n'
