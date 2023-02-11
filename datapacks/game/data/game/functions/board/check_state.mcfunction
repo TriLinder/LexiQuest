@@ -15,7 +15,8 @@ bossbar set minecraft:bar players @a
 execute if score state current_round matches 0 run bossbar set minecraft:bar name ["",{"selector":"@p[tag=current_player]"},{"text":"'s turn"}]
 execute if score state current_round matches 0 run bossbar set minecraft:bar color blue
 
-execute if score state current_round matches 1 run bossbar set minecraft:bar name ["",{"text":"Play for "},{"score":{"name":"score","objective":"current_round"}},{"text":" points."}]
+execute if score state current_round matches 1 if score score current_round matches 1 run bossbar set minecraft:bar name "Play for 1 point."
+execute if score state current_round matches 1 unless score score current_round matches 1 run bossbar set minecraft:bar name ["",{"text":"Play for "},{"score":{"name":"score","objective":"current_round"}},{"text":" points."}]
 execute if score state current_round matches 1 run bossbar set minecraft:bar color green
 
 execute if score state current_round matches 2 run bossbar set minecraft:bar name "Invalid placement!"
