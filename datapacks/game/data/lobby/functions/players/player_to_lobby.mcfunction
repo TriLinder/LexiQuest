@@ -2,6 +2,7 @@ clear @s
 effect clear @a
 gamemode adventure @s
 
+tag @s remove player
 tag @s remove current_player
 tag @s remove swapping_letters
 
