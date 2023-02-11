@@ -3,6 +3,9 @@ effect clear @a
 gamemode adventure @s
 
 tag @a add player
+tag @s remove spectator
+
+title @s actionbar ""
 
 xp set @s 0 levels
 xp set @s 0 points
