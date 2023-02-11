@@ -4,6 +4,7 @@ scoreboard objectives add recursion_counter dummy
 scoreboard objectives add configuration dummy
 
 #Misc
+scoreboard objectives add left_game minecraft.custom:minecraft.leave_game
 scoreboard objectives add numerals dummy
 bossbar add bar ""
 
