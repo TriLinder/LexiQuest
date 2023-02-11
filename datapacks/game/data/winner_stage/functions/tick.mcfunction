@@ -1,4 +1,6 @@
-clear @a
-kill @e[type=item]
+function winner_stage:update_counter
 
-item replace entity @a[tag=winner] armor.head with minecraft:egg{HideFlags: 127, Enchantments: [{lvl:1s, id: "minecraft:protection"}], display: {"Name": "{\"text\": \"Winner's crown\", \"italic\": false}"}}
+execute if score %40_counter winner_stage matches 0 run function winner_stage:spawn_fireworks
+
+execute as @a at @s run function winner_stage:players/update_inventory
+kill @e[type=item]

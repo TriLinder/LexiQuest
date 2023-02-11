@@ -7,6 +7,9 @@ scoreboard objectives add configuration dummy
 scoreboard objectives add numerals dummy
 bossbar add bar ""
 
+#Winner stage
+scoreboard objectives add winner_stage dummy
+
 #Lobby
 scoreboard objectives add lobby dummy
 
