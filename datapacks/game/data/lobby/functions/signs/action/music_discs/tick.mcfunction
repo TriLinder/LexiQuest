@@ -1,0 +1,1 @@
+function lobby:signs/action/music_discs/check_for_clicks
