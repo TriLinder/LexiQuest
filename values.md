@@ -44,6 +44,8 @@
 | 02  | LOBBY - LETTERS IN BAG CONFIG - PLUS  | MUST BE IN LOBBY |
 | 03  | RESERVED                              | --               |
 | 04  | LOBBY - PLAY SIGN                     | MUST BE IN LOBBY |
+| 05  | LOBBY - SPECIAL TILES CONFIG          | MUST BE IN LOBBY |
+|     |                                       |                  |
 | 100 | LOBBY - MUSIC DISC - CAT              | MUST BE IN LOBBY |
 | 101 | LOBBY - MUSIC DISC - BLOCKS           | MUST BE IN LOBBY |
 | 102 | LOBBY - MUSIC DISC - CHRIP            | MUST BE IN LOBBY |

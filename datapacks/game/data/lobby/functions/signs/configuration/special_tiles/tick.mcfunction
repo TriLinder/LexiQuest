@@ -1,0 +1,1 @@
+function lobby:signs/configuration/special_tiles/update_sign
