@@ -1,0 +1,11 @@
+{
+    "wordcraft.dice": {
+        "sounds": [
+          {
+            "name": "custom/dice",
+            "volume": 1,
+            "weight": 1
+          }
+        ]
+      }
+}

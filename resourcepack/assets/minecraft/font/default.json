@@ -6,6 +6,62 @@
             "ascent": 5000,
             "height": 10000,
             "chars": ["\uE000"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:block/pink_wool.png",
+            "ascent": 6,
+            "height": 12,
+            "chars": ["\uE001"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:block/red_concrete_powder.png",
+            "ascent": 6,
+            "height": 12,
+            "chars": ["\uE002"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:block/orange_wool.png",
+            "ascent": 6,
+            "height": 12,
+            "chars": ["\uE003"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:block/light_blue_concrete_powder.png",
+            "ascent": 6,
+            "height": 12,
+            "chars": ["\uE004"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:block/magenta_concrete_powder.png",
+            "ascent": 6,
+            "height": 12,
+            "chars": ["\uE005"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:block/white_concrete_powder.png",
+            "ascent": 6,
+            "height": 12,
+            "chars": ["\uE006"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:block/lime_concrete_powder.png",
+            "ascent": 6,
+            "height": 12,
+            "chars": ["\uE007"]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:block/light_blue_wool.png",
+            "ascent": 6,
+            "height": 12,
+            "chars": ["\uE008"]
         }
     ]
 }
