@@ -45,7 +45,8 @@ scoreboard objectives add prev_word_id_down dummy
 
 #Scoring
 scoreboard objectives add tile_value dummy
-scoreboard objectives add score dummy
+scoreboard objectives add score dummy "Score"
+scoreboard objectives add xp_levels dummy
 
 #Interaction
 scoreboard objectives add trigger trigger
