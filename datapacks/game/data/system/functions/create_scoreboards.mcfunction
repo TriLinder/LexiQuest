@@ -30,6 +30,8 @@ scoreboard objectives add turn_order dummy
 
 #Board
 scoreboard objectives add tile_type dummy
+scoreboard objectives add connected_to_center dummy
+scoreboard objectives add tile_filled dummy
 scoreboard objectives add current_round dummy
 
 #Word detection
