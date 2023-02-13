@@ -1,5 +1,5 @@
 scoreboard players set @s word_direction -1 
-scoreboard players set @e[tag=tile_marker] starts_with_space 0 
+scoreboard players set @e[tag=tile_marker] enclosed_with_space 0 
 scoreboard players set @s word_id -1 
 scoreboard players set @s word_id_right -1 
 scoreboard players set @s word_id_down -1 

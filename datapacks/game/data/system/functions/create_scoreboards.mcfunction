@@ -34,7 +34,7 @@ scoreboard objectives add current_round dummy
 
 #Word detection
 scoreboard objectives add word_direction dummy
-scoreboard objectives add starts_with_space dummy
+scoreboard objectives add enclosed_with_space dummy
 
 scoreboard objectives add word_id dummy
 scoreboard objectives add word_id_right dummy

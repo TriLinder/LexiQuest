@@ -4,10 +4,17 @@
 # 2 = Invalid placement
 
 #Check state
+#No tiles placed (default)
 scoreboard players set state current_round 0
 
+#Ok
 execute as @e[tag=tile_marker] at @s if block ~ ~-2 ~ minecraft:yellow_concrete run scoreboard players set state current_round 1
+
+#Invalid placement
 execute as @e[tag=tile_marker] at @s if block ~ ~-2 ~ minecraft:yellow_concrete unless block ~ ~-1 ~ minecraft:blue_concrete run scoreboard players set state current_round 2
+
+execute as @e[tag=tile_marker, scores={word_id_right=-1}] at @s if block ~ ~-4 ~ minecraft:pink_concrete if block ~-1 ~-4 ~ minecraft:air if block ~1 ~-4 ~ minecraft:pink_concrete run scoreboard players set state current_round 2
+execute as @e[tag=tile_marker, scores={word_id_down=-1}] at @s if block ~ ~-4 ~ minecraft:pink_concrete if block ~ ~-4 ~-1 minecraft:air if block ~ ~-4 ~1 minecraft:pink_concrete run scoreboard players set state current_round 2
 
 #Set bossbar
 bossbar set minecraft:bar players @a

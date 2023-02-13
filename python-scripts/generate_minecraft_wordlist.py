@@ -36,30 +36,29 @@ def generate_word(id: int, word: str) -> None:
                     
                     f.write(output)
         
-        else: #Word finished, check if the words starts with a space, set word id and fill blue concrete
+        else: #Word finished, check if the word is enclosed by space tiles, set word id and fill blue concrete
             directory = Path(f"output/wordlist/{'/'.join(word[:i+1])}")
             os.makedirs(directory, exist_ok=True)
 
             with open(Path(f"{directory}/check.mcfunction"), "a") as f:
                 output = ""
 
-                #Check if the word starts with a space
+                #Check if the word is enclosed by space tiles
+                #Pink concrete represents a non-empty tile
                 coordinates = [f"~-1 ~-4 ~", f"~ ~-4 ~-1"]
-
-                for direction, coords in enumerate(coordinates):
-                    #Pink concrete represents a non-empty tile
-                    output += f"execute if score @s word_direction matches {direction} unless block {coords} minecraft:pink_concrete run scoreboard players set @s starts_with_space 1 \n"
+                output += f"execute if score @s word_direction matches 0 unless block ~-1 ~-4 ~ minecraft:pink_concrete unless block ~{len(word)} ~-4 ~ minecraft:pink_concrete run scoreboard players set @s enclosed_with_space 1 \n"
+                output += f"execute if score @s word_direction matches 1 unless block ~ ~-4 ~-1 minecraft:pink_concrete unless block ~ ~-4 ~{len(word)} minecraft:pink_concrete run scoreboard players set @s enclosed_with_space 1 \n"
 
                 #Set word id
-                output += f"execute if score @s starts_with_space matches 1 run scoreboard players set @s word_id {id} \n"
-                output += f"execute if score @s starts_with_space matches 1 if score @s word_direction matches 0 run scoreboard players set @s word_id_right {id} \n"
-                output += f"execute if score @s starts_with_space matches 1 if score @s word_direction matches 1 run scoreboard players set @s word_id_down {id} \n"
+                output += f"execute if score @s enclosed_with_space matches 1 run scoreboard players set @s word_id {id} \n"
+                output += f"execute if score @s enclosed_with_space matches 1 if score @s word_direction matches 0 run scoreboard players set @s word_id_right {id} \n"
+                output += f"execute if score @s enclosed_with_space matches 1 if score @s word_direction matches 1 run scoreboard players set @s word_id_down {id} \n"
 
                 #Fill blue concrete
                 coordinates = [f"~{len(word) - 1} ~-1 ~", f"~ ~-1 ~{len(word) - 1}"] #Coordinates (directions) to fill
                 
                 for direction, coords in enumerate(coordinates):
-                    output += f"execute if score @s starts_with_space matches 1 if score @s word_direction matches {direction} run fill ~ ~-1 ~ {coords} minecraft:blue_concrete \n"
+                    output += f"execute if score @s enclosed_with_space matches 1 if score @s word_direction matches {direction} run fill ~ ~-1 ~ {coords} minecraft:blue_concrete \n"
 
                 f.write(output)
 
@@ -70,7 +69,7 @@ def generate_minecraft_wordlist() -> None:
         output = ""
         
         output += "scoreboard players set @s word_direction -1 \n"
-        output += "scoreboard players set @e[tag=tile_marker] starts_with_space 0 \n"
+        output += "scoreboard players set @e[tag=tile_marker] enclosed_with_space 0 \n"
 
         output += "scoreboard players set @s word_id -1 \n"
         output += "scoreboard players set @s word_id_right -1 \n"
