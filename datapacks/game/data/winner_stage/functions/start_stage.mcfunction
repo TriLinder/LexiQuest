@@ -9,7 +9,8 @@ scoreboard players set state state 2
 #Reset counter
 scoreboard players set counter winner_stage 0
 
-#Bossbar
+#Bossbars
+bossbar set minecraft:letters_left_in_bag visible false
 bossbar set minecraft:bar visible true
 bossbar set minecraft:bar name ["",{"selector":"@a[tag=winner]"},{"text":" won the game!"}]
 bossbar set minecraft:bar color green

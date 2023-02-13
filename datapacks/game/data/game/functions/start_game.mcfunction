@@ -7,6 +7,7 @@ scoreboard players operation letters_left letter_bag = letters_in_bag configurat
 
 scoreboard players set state state 1
 bossbar set minecraft:bar visible true
+bossbar set minecraft:letters_left_in_bag visible true
 
 scoreboard objectives setdisplay belowName score
 scoreboard objectives setdisplay list score

@@ -57,6 +57,7 @@ scoreboard objectives add dropped_item minecraft.custom:minecraft.drop
 
 #Letter bag
 scoreboard objectives add letter_bag dummy
+bossbar add letters_left_in_bag ""
 
 #Inventory
 scoreboard objectives add inventory dummy

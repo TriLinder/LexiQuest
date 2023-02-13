@@ -16,7 +16,7 @@ execute as @e[tag=tile_marker] at @s if block ~ ~-2 ~ minecraft:yellow_concrete 
 execute as @e[tag=tile_marker, scores={word_id_right=-1}] at @s if block ~ ~-4 ~ minecraft:pink_concrete if block ~-1 ~-4 ~ minecraft:air if block ~1 ~-4 ~ minecraft:pink_concrete run scoreboard players set state current_round 2
 execute as @e[tag=tile_marker, scores={word_id_down=-1}] at @s if block ~ ~-4 ~ minecraft:pink_concrete if block ~ ~-4 ~-1 minecraft:air if block ~ ~-4 ~1 minecraft:pink_concrete run scoreboard players set state current_round 2
 
-#Set bossbar
+#Set bossbars
 bossbar set minecraft:bar players @a
 
 execute if score state current_round matches 0 run bossbar set minecraft:bar name ["",{"selector":"@p[tag=current_player]"},{"text":"'s turn"}]
@@ -28,3 +28,7 @@ execute if score state current_round matches 1 run bossbar set minecraft:bar col
 
 execute if score state current_round matches 2 run bossbar set minecraft:bar name "Invalid placement!"
 execute if score state current_round matches 2 run bossbar set minecraft:bar color red
+
+bossbar set minecraft:letters_left_in_bag players @a
+bossbar set minecraft:letters_left_in_bag color purple
+bossbar set minecraft:letters_left_in_bag name ["",{"score":{"name":"letters_left","objective":"letter_bag"}},{"text":" letters in bag"}]
