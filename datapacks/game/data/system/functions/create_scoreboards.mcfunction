@@ -6,6 +6,7 @@ scoreboard objectives add configuration dummy
 #Misc
 scoreboard objectives add left_server minecraft.custom:minecraft.leave_game
 scoreboard objectives add numerals dummy
+team add all
 bossbar add bar ""
 
 #Winner stage

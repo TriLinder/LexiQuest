@@ -7,6 +7,8 @@ tag @s remove swapping_letters
 tag @s remove spectator
 tag @s remove winner
 
+team join all @s
+
 function effects:hud/game_title
 
 execute if score state state matches -1 run function lobby:players/player_server_join
