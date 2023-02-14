@@ -1,0 +1,8 @@
+execute if block ~5 ~ ~ minecraft:green_concrete_powder run scoreboard players set @s word_direction 0
+execute if block ~5 ~ ~ minecraft:green_concrete_powder run function wordlist:r/e/a/d/i/n/c
+execute if block ~ ~ ~5 minecraft:green_concrete_powder run scoreboard players set @s word_direction 1
+execute if block ~ ~ ~5 minecraft:green_concrete_powder run function wordlist:r/e/a/d/i/n/c
+execute if block ~5 ~ ~ minecraft:blue_concrete_powder run scoreboard players set @s word_direction 0
+execute if block ~5 ~ ~ minecraft:blue_concrete_powder run function wordlist:r/e/a/d/i/l/c
+execute if block ~ ~ ~5 minecraft:blue_concrete_powder run scoreboard players set @s word_direction 1
+execute if block ~ ~ ~5 minecraft:blue_concrete_powder run function wordlist:r/e/a/d/i/l/c
