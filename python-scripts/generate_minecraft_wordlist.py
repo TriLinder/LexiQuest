@@ -7,7 +7,7 @@ with open("letters.json", "r") as f:
     letters = json.load(f)["letters"]
 
 with open(Path("assets/words.txt"), "r") as f:
-    words = f.read().strip().split("\n")
+    words = list(set(f.read().strip().split("\n")))
 
 def generate_word(id: int, word: str) -> None:
     word = word.lower()
@@ -19,11 +19,11 @@ def generate_word(id: int, word: str) -> None:
             next_character = word[i + 1]
             next_letter = letters[string.ascii_lowercase.find(next_character)]
 
-            directory = Path(f"output/wordlist/{'/'.join(word[:i+1])}") #Path to check.mcfunction directory
+            directory = Path(f"output/wordlist/{'/'.join(word[:i+1])}") #Path to c.mcfunction directory
             os.makedirs(directory, exist_ok=True)
 
             if not os.path.isdir(f"{directory}/{next_character}"): #If a check for this character doesn't yet exist
-                with open(Path(f"{directory}/check.mcfunction"), "a") as f:
+                with open(Path(f"{directory}/c.mcfunction"), "a") as f:
                     output = ""
                     
                     coordinates = [f"~{i + 1} ~ ~", f"~ ~ ~{i + 1}"] #Coordinates (directions) to check
@@ -32,22 +32,22 @@ def generate_word(id: int, word: str) -> None:
                         condition = f"execute if block {coords} {next_letter['block']}"
                         
                         output += f"{condition} run scoreboard players set @s word_direction {direction} \n"
-                        output += f"{condition} run function wordlist:{'/'.join(word[:i+2])}/check \n"
+                        output += f"{condition} run function wordlist:{'/'.join(word[:i+2])}/c \n"
                     
-                    f.write(output)
+                    f.write(output.replace(" \n", "\n"))
         
         else: #Word finished, check if the word is enclosed by space tiles, set word id and fill blue concrete
             directory = Path(f"output/wordlist/{'/'.join(word[:i+1])}")
             os.makedirs(directory, exist_ok=True)
 
-            with open(Path(f"{directory}/check.mcfunction"), "a") as f:
+            with open(Path(f"{directory}/c.mcfunction"), "a") as f:
                 output = ""
 
                 #Check if the word is enclosed by space tiles
                 #Pink concrete represents a non-empty tile
                 coordinates = [f"~-1 ~-4 ~", f"~ ~-4 ~-1"]
-                output += f"execute if score @s word_direction matches 0 unless block ~-1 ~-4 ~ minecraft:pink_concrete unless block ~{len(word)} ~-4 ~ minecraft:pink_concrete run scoreboard players set @s enclosed_with_space 1 \n"
-                output += f"execute if score @s word_direction matches 1 unless block ~ ~-4 ~-1 minecraft:pink_concrete unless block ~ ~-4 ~{len(word)} minecraft:pink_concrete run scoreboard players set @s enclosed_with_space 1 \n"
+                output += f"execute if score @s word_direction matches 0 if block ~-1 ~-4 ~ minecraft:air if block ~{len(word)} ~-4 ~ minecraft:air run scoreboard players set @s enclosed_with_space 1 \n"
+                output += f"execute if score @s word_direction matches 1 if block ~ ~-4 ~-1 minecraft:air if block ~ ~-4 ~{len(word)} minecraft:air run scoreboard players set @s enclosed_with_space 1 \n"
 
                 #Set word id
                 output += f"execute if score @s enclosed_with_space matches 1 run scoreboard players set @s word_id {id} \n"
@@ -60,7 +60,7 @@ def generate_word(id: int, word: str) -> None:
                 for direction, coords in enumerate(coordinates):
                     output += f"execute if score @s enclosed_with_space matches 1 if score @s word_direction matches {direction} run fill ~ ~-1 ~ {coords} minecraft:blue_concrete \n"
 
-                f.write(output)
+                f.write(output.replace(" \n", "\n"))
 
 def generate_minecraft_wordlist() -> None:
     words.sort(key=lambda word: len(word))
@@ -76,7 +76,7 @@ def generate_minecraft_wordlist() -> None:
         output += "scoreboard players set @s word_id_down -1 \n"
 
         for letter in letters: #Inital check for all letters
-            output += f"execute if block ~ ~ ~ {letter['block']} run function wordlist:{letter['letter'].lower()}/check \n"
+            output += f"execute if block ~ ~ ~ {letter['block']} run function wordlist:{letter['letter'].lower()}/c \n"
         
         f.write(output)
 
