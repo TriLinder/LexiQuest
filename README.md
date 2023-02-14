@@ -1,6 +1,6 @@
 # WordCraft
 
-![1.png](promotinal-assets/screenshots/1.png)
+![1.png](promotional-assets/screenshots/1.png)
 
 Your favorite word board game in Minecraft.
 
