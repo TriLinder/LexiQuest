@@ -59,7 +59,7 @@ def generate_inventory_update():
                 "Action": 3,
                 "display": {
                                 "Name": json.dumps({"text": "Swap letters", "italic": False}),
-                                "Lore": [json.dumps({"text": "PLACEHOLDER TEXT", "italic": False})]
+                                "Lore": [json.dumps({"text": "Right-click to swap your letters", "italic": False})]
                             }
             }
 
@@ -71,7 +71,7 @@ def generate_inventory_update():
                 "Action": 4,
                 "display": {
                                 "Name": json.dumps({"text": "End the Game", "italic": False}),
-                                "Lore": [json.dumps({"text": "PLACEHOLDER TEXT", "italic": False})]
+                                "Lore": [json.dumps({"text": "Right-click to end the game", "italic": False})]
                             }
             }
 
@@ -86,7 +86,7 @@ def generate_inventory_update():
                 "Action": 1,
                 "display": {
                                 "Name": json.dumps({"text": "Play", "italic": False}),
-                                "Lore": [json.dumps({"text": "PLACEHOLDER TEXT", "italic": False})]
+                                "Lore": [json.dumps({"text": "Right-click to confirm your play", "italic": False})]
                             }
             }
 
@@ -98,7 +98,7 @@ def generate_inventory_update():
                 "Action": 2,
                 "display": {
                                 "Name": json.dumps({"text": "Pass turn", "italic": False}),
-                                "Lore": [json.dumps({"text": "PLACEHOLDER TEXT", "italic": False})]
+                                "Lore": [json.dumps({"text": "Right-click to pass your turn", "italic": False})]
                             }
             }
 
