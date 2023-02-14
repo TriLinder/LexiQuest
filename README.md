@@ -1,4 +1,4 @@
-# WordCraft
+<p align="center"><img title="WordCraft logotype" src="promotional-assets/logotype.png" alt="WordCraft logotype" data-align="center" width="499"></p>
 
 ![1.png](promotional-assets/screenshots/1.png)
 
