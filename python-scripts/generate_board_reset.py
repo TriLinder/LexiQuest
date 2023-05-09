@@ -23,7 +23,7 @@ def generate_board_reset(board_size: int) -> None:
     
     output += "function game:board/assign_tile_types \n"
 
-    output += "function game:board/update_glowing \n"
+    output += "function game:board/update_highlights \n"
 
     with open(Path("output/board_reset.mcfunction"), "w") as f:
         f.write(output)

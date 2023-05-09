@@ -734,4 +734,4 @@ scoreboard players set @e[tag=tile_marker] prev_word_id -1
 execute as @e[tag=tile_marker] at @s run setblock ~ ~-1 ~ minecraft:black_concrete 
 execute as @e[tag=tile_marker] at @s run fill ~ ~-2 ~ ~ ~-12 ~ minecraft:air 
 function game:board/assign_tile_types 
-function game:board/update_glowing 
+function game:board/update_highlights 
