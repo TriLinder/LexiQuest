@@ -1,6 +1,6 @@
-effect give @a minecraft:saturation 1000000 255 true
-effect give @a minecraft:regeneration 1000000 255 true
-effect give @a minecraft:resistance 1000000 255 true
+effect give @a minecraft:saturation infinite 255 true
+effect give @a minecraft:regeneration infinite 255 true
+effect give @a minecraft:resistance infinite 255 true
 
 execute unless entity @a[tag=current_player] if entity @a[tag=player] run function game:turns/next_player
 execute unless entity @a[tag=player] run function lobby:return_to_lobby
