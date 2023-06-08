@@ -1,5 +1,5 @@
 #Update text
-execute as @e[tag=play_sign] at @s run data merge block ~ ~ ~ {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger trigger set 4"}}',Text2:'{"text":"Play!","bold":true,"color":"aqua"}'}
+execute as @e[tag=play_sign] at @s run data merge block ~ ~ ~ {front_text:{messages:['{"clickEvent":{"action":"run_command","value":"trigger trigger set 4"},"text":""}','{"bold":true,"color":"aqua","text":"Play!"}','{"text":""}','{"text":""}']},is_waxed:0b}
 
 #Check for clicks
 execute if entity @a[scores={trigger=4}] as @a at @s run stopsound @a

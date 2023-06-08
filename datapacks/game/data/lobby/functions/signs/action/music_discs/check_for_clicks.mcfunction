@@ -14,7 +14,7 @@ execute if entity @a[scores={trigger=104}] run stopsound @a record
 execute if entity @a[scores={trigger=104}] run execute as @e[tag=lobby_music_source] at @s run playsound minecraft:music_disc.mall record @a ~ ~ ~ 100 1 1
 
 execute if entity @a[scores={trigger=105}] run stopsound @a record
-execute if entity @a[scores={trigger=105}] run execute as @e[tag=lobby_music_source] at @s run playsound minecraft:music_disc.mellohi record @a ~ ~ ~ 100 1 1
+execute if entity @a[scores={trigger=105}] run execute as @e[tag=lobby_music_source] at @s run playsound minecraft:music_disc.relic record @a ~ ~ ~ 100 1 1
 
 execute if entity @a[scores={trigger=106}] run stopsound @a record
 execute if entity @a[scores={trigger=106}] run execute as @e[tag=lobby_music_source] at @s run playsound minecraft:music_disc.stal record @a ~ ~ ~ 100 1 1

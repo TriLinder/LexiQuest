@@ -15,16 +15,6 @@ scoreboard objectives add winner_stage dummy
 #Lobby
 scoreboard objectives add lobby dummy
 
-#Color teams
-team add red
-team modify red color red
-
-team add green
-team modify green color green
-
-team add blue
-team modify blue color blue
-
 #Turns
 scoreboard objectives add turn_order dummy
 
