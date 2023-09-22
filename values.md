@@ -26,6 +26,10 @@
 | 00  | RIGHT (+X)               |
 | 01  | DOWN (+Z)                |
 
+## Hotbar buttons IDs
+
+Same as carrot on a stick action IDs. (0 = empty)
+
 ## Carrot on a Stick Actions
 
 | #   | ACTION       |
