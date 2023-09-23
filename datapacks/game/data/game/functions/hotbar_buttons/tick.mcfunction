@@ -12,3 +12,6 @@ execute as @a[scores={used_carrot_stick=1..}, nbt={SelectedItem: {tag: {Action: 
 
 #Detect 'recall letters' click
 execute as @a[scores={used_carrot_stick=1..}, nbt={SelectedItem: {tag: {Action: 5}}}] run function game:board/recall_letters
+
+#Detect 'cancel swapping letters' click
+execute as @a[scores={used_carrot_stick=1..}, nbt={SelectedItem: {tag: {Action: 6}}}] run function game:letter_swapping/cancel_swapping_letters
