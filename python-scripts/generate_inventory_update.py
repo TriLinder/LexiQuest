@@ -51,6 +51,7 @@ def generate_inventory_update():
     output += "execute if entity @s[tag=current_player] unless entity @s[tag=swapping_letters] if score state current_round matches 0 if score letters_left letter_bag matches 1.. run scoreboard players set slot0 hotbar_buttons 3 \n"
     output += "execute if entity @s[tag=current_player] unless entity @s[tag=swapping_letters] if score state current_round matches 0 unless score letters_left letter_bag matches 1.. run scoreboard players set slot0 hotbar_buttons 4 \n"
     output += "execute if entity @s[tag=current_player] unless entity @s[tag=swapping_letters] unless score state current_round matches 0 run scoreboard players set slot1 hotbar_buttons 5 \n"
+    output += "execute if entity @s[tag=current_player] if entity @s[tag=swapping_letters] if score @s swapped_letters matches 0 run scoreboard players set slot0 hotbar_buttons 6 \n"
 
     #Play button
     nbt = {
@@ -116,6 +117,19 @@ def generate_inventory_update():
 
     output += f"execute if score slot0 hotbar_buttons matches 5 run item replace entity @s hotbar.7 with minecraft:carrot_on_a_stick{json.dumps(nbt)} \n"
     output += f"execute if score slot1 hotbar_buttons matches 5 run item replace entity @s hotbar.8 with minecraft:carrot_on_a_stick{json.dumps(nbt)} \n"
+
+    #Cancel swapping button
+    nbt = {
+                "CustomModelData": 7,
+                "Action": 6,
+                "display": {
+                                "Name": json.dumps({"text": "Cancel swapping", "italic": False}),
+                                "Lore": [json.dumps({"text": "Right-click to cancel swapping letters", "italic": False})]
+                            }
+            }
+
+    output += f"execute if score slot0 hotbar_buttons matches 6 run item replace entity @s hotbar.7 with minecraft:carrot_on_a_stick{json.dumps(nbt)} \n"
+    output += f"execute if score slot1 hotbar_buttons matches 6 run item replace entity @s hotbar.8 with minecraft:carrot_on_a_stick{json.dumps(nbt)} \n"
     
     #Clear the slots if empty
     output += f"execute if score slot0 hotbar_buttons matches 0 run item replace entity @s hotbar.7 with minecraft:air \n"

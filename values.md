@@ -32,13 +32,14 @@ Same as carrot on a stick action IDs. (0 = empty)
 
 ## Carrot on a Stick Actions
 
-| #   | ACTION                |
-|:---:|:---------------------:|
-| 01  | PLAY                  |
-| 02  | PASS TURN             |
-| 03  | SWAP LETTERS          |
-| 04  | END GAME              |
-| 05  | RECALL PLACED LETTERS |
+| #   | ACTION                  |
+|:---:|:-----------------------:|
+| 01  | PLAY                    |
+| 02  | PASS TURN               |
+| 03  | SWAP LETTERS            |
+| 04  | END GAME                |
+| 05  | RECALL PLACED LETTERS   |
+| 06  | CANCEL SWAPPING LETTERS |
 
 ## Trigger IDs
 
