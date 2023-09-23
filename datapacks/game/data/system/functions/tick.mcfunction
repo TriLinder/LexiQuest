@@ -9,6 +9,7 @@ execute as @a[scores={left_server=1..}] at @s run function system:player_server_
 execute if score state state matches 0 run function lobby:tick
 execute if score state state matches 1 run function game:tick
 execute if score state state matches 2 run function winner_stage:tick
+execute if score state state matches 3 run function tutorial:tick
 
 #Enable triggers
 scoreboard players set @a trigger 0

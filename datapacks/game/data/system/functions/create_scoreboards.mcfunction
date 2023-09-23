@@ -67,3 +67,6 @@ scoreboard objectives add hotbar_buttons dummy
 
 #Letters swapping
 scoreboard objectives add swapped_letters dummy
+
+#Tutorial
+scoreboard objectives add tutorial dummy

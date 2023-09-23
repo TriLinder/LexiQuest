@@ -7,6 +7,7 @@
 | 00  | LOBBY        |
 | 01  | IN GAME      |
 | 02  | WINNER STAGE |
+| 03  | TUTORIAL     |
 
 ## Tile types
 
