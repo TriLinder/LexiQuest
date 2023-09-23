@@ -222,7 +222,7 @@ execute if entity @s[tag=current_player] unless entity @s[tag=swapping_letters] 
 execute if entity @s[tag=current_player] if score state current_round matches 0 run scoreboard players set slot1 hotbar_buttons 2 
 execute if entity @s[tag=current_player] unless entity @s[tag=swapping_letters] if score state current_round matches 0 if score letters_left letter_bag matches 1.. run scoreboard players set slot0 hotbar_buttons 3 
 execute if entity @s[tag=current_player] unless entity @s[tag=swapping_letters] if score state current_round matches 0 unless score letters_left letter_bag matches 1.. run scoreboard players set slot0 hotbar_buttons 4 
-execute if entity @s[tag=current_player] unless entity @s[tag=swapping_letters] unless score state current_round matches 0 run scoreboard players set slot1 hotbar_buttons 5 
+execute if entity @s[tag=current_player] unless entity @s[tag=swapping_letters] unless score state current_round matches 0 run scoreboard players set slot0 hotbar_buttons 5 
 execute if entity @s[tag=current_player] if entity @s[tag=swapping_letters] if score @s swapped_letters matches 0 run scoreboard players set slot0 hotbar_buttons 6 
 execute if score slot0 hotbar_buttons matches 1 run item replace entity @s hotbar.7 with minecraft:carrot_on_a_stick{"CustomModelData": 2, "Action": 1, "display": {"Name": "{\"text\": \"Play\", \"italic\": false}", "Lore": ["{\"text\": \"Right-click to confirm your play\", \"italic\": false}"]}} 
 execute if score slot1 hotbar_buttons matches 1 run item replace entity @s hotbar.8 with minecraft:carrot_on_a_stick{"CustomModelData": 2, "Action": 1, "display": {"Name": "{\"text\": \"Play\", \"italic\": false}", "Lore": ["{\"text\": \"Right-click to confirm your play\", \"italic\": false}"]}} 

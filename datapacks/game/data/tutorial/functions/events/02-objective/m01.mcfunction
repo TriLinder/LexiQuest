@@ -1,0 +1,1 @@
+tellraw @a {"text": "Your objective is to form valid words on the board.", "color": "white"}
