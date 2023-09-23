@@ -9,3 +9,5 @@ function tutorial:events/06-swap-or-pass/tick
 function tutorial:events/07-end/tick
 function tutorial:events/08-bonus-tiles/tick
 function tutorial:events/09-enjoy/tick
+
+execute if score tick_counter tutorial matches 1180 run function tutorial:end_tutorial
