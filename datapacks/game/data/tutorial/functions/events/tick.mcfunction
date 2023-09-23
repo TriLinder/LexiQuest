@@ -6,3 +6,4 @@ function tutorial:events/03-connected/tick
 function tutorial:events/04-letters/tick
 function tutorial:events/05-score/tick
 function tutorial:events/06-swap-or-pass/tick
+function tutorial:events/07-end/tick

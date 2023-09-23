@@ -1,0 +1,1 @@
+tellraw @a {"text": "The game ends when the letter bag is empty. The player with the highest score wins the game.", "color": "white"}
