@@ -9,3 +9,6 @@ execute as @a[scores={used_carrot_stick=1..}, nbt={SelectedItem: {tag: {Action: 
 
 #Detect 'end game' click
 execute as @a[scores={used_carrot_stick=1..}, nbt={SelectedItem: {tag: {Action: 4}}}] run function game:end_game
+
+#Detect 'recall letters' click
+execute as @a[scores={used_carrot_stick=1..}, nbt={SelectedItem: {tag: {Action: 5}}}] run function game:board/recall_letters
