@@ -1,0 +1,1 @@
+tellraw @a {"text": "All letters on the board must always be connected.", "color": "white"}
