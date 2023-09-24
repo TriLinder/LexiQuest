@@ -1,0 +1,1 @@
+execute if score vote_in_progress end_game_vote matches 1.. run function game:end_game_vote/vote_tick

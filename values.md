@@ -67,3 +67,6 @@ Same as carrot on a stick action IDs. (0 = empty)
 | 109 | LOBBY - MUSIC DISC - OTHERSIDE        | MUST BE IN LOBBY |
 | 110 | LOBBY - MUSIC DISC - PIGSTEP          | MUST BE IN LOBBY |
 | 111 | LOBBY - MUSIC DISC - STOP PLAYING     | MUST BE IN LOBBY |
+|     |                                       |                  |
+| 200 | START VOTE TO END GAME                | MUST BE IN GAME  |
+| 201 | VOTE TO END GAME                      |                  |
