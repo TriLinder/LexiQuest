@@ -3,6 +3,8 @@ function game:board/reset
 function game:turns/assign_turn_order
 function game:turns/next_player
 
+scoreboard players set vote_in_progress end_game_vote 0
+
 scoreboard players operation letters_left letter_bag = letters_in_bag configuration
 
 scoreboard players set state state 1

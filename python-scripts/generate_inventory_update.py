@@ -49,7 +49,8 @@ def generate_inventory_update():
     output += "execute if entity @s[tag=current_player] unless entity @s[tag=swapping_letters] if score state current_round matches 1 run scoreboard players set slot1 hotbar_buttons 1 \n"
     output += "execute if entity @s[tag=current_player] if score state current_round matches 0 run scoreboard players set slot1 hotbar_buttons 2 \n"
     output += "execute if entity @s[tag=current_player] unless entity @s[tag=swapping_letters] if score state current_round matches 0 if score letters_left letter_bag matches 1.. run scoreboard players set slot0 hotbar_buttons 3 \n"
-    output += "execute if entity @s[tag=current_player] unless entity @s[tag=swapping_letters] if score state current_round matches 0 unless score letters_left letter_bag matches 1.. run scoreboard players set slot0 hotbar_buttons 4 \n"
+    output += "execute if entity @s[tag=current_player] unless entity @s[tag=swapping_letters] if score state current_round matches 0 unless score letters_left letter_bag matches 1.. if score vote_in_progress end_game_vote matches 0 run scoreboard players set slot0 hotbar_buttons 4 \n"
+    output += "execute unless entity @s[tag=current_player] if score vote_in_progress end_game_vote matches 0 run scoreboard players set slot1 hotbar_buttons 4 \n"
     output += "execute if entity @s[tag=current_player] unless entity @s[tag=swapping_letters] unless score state current_round matches 0 run scoreboard players set slot0 hotbar_buttons 5 \n"
     output += "execute if entity @s[tag=current_player] if entity @s[tag=swapping_letters] if score @s swapped_letters matches 0 run scoreboard players set slot0 hotbar_buttons 6 \n"
 
@@ -98,7 +99,7 @@ def generate_inventory_update():
                 "Action": 4,
                 "display": {
                                 "Name": json.dumps({"text": "End the Game", "italic": False}),
-                                "Lore": [json.dumps({"text": "Right-click to end the game", "italic": False})]
+                                "Lore": [json.dumps({"text": "Right-click to start a vote to end the game", "italic": False})]
                             }
             }
 
