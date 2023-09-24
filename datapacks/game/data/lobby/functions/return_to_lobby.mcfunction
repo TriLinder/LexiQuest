@@ -7,5 +7,5 @@ scoreboard players set state state 0
 bossbar set minecraft:bar visible false
 bossbar set minecraft:letters_left_in_bag visible false
 
-scoreboard objectives setdisplay belowName
+scoreboard objectives setdisplay below_name
 scoreboard objectives setdisplay list

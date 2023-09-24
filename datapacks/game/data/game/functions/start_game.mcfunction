@@ -11,7 +11,7 @@ scoreboard players set state state 1
 bossbar set minecraft:bar visible true
 bossbar set minecraft:letters_left_in_bag visible true
 
-scoreboard objectives setdisplay belowName score
+scoreboard objectives setdisplay below_name score
 scoreboard objectives setdisplay list score
 
 execute as @a at @s run function game:players/player_join_game

@@ -16,5 +16,5 @@ bossbar set minecraft:bar name ["",{"selector":"@a[tag=winner]"},{"text":" won t
 bossbar set minecraft:bar color green
 
 #Scoreboards
-scoreboard objectives setdisplay belowName
+scoreboard objectives setdisplay below_name
 scoreboard objectives setdisplay list
