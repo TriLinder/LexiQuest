@@ -1,0 +1,1 @@
+execute as @e[tag=lobby_tutorial_entrance_block_display] at @s run tp @s ~ ~ ~ ~5 ~

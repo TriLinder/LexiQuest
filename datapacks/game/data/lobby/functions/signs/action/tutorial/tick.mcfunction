@@ -1,0 +1,2 @@
+function lobby:signs/action/tutorial/update_block_display
+function lobby:signs/action/tutorial/update_interaction

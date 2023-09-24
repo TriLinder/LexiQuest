@@ -1,0 +1,1 @@
+summon minecraft:interaction 69.5 129.25 55.0 {Tags:["lobby_tutorial_entrance", "lobby_tutorial_entrance_interaction"], height:3, width:2}
