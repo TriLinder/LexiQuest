@@ -2,4 +2,4 @@ python-scripts/assets/*
 python-scripts/output/*
 python-scripts/venv/*
 
-datapacks/game/data/wordlist
+datapacks/game/data/wordlist/functions

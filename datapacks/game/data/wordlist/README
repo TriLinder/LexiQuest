@@ -1,10 +1,10 @@
 Custom wordlist generated from http://app.aspell.net/create using SCOWL
 with parameters:
   diacritic: strip
-  max_size: 20
+  max_size: 35
   max_variant: 0
   special: hacker
-  spelling: US GBs
+  spelling: US
 
 Using Git Commit From: Mon Dec 7 20:14:35 2020 -0500 [5ef55f9]
 
@@ -40,4 +40,3 @@ the public domain or used indirectly.  For a full list please see the
 SCOWL readme.
 
 http://wordlist.aspell.net/
-
