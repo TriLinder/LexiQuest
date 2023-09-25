@@ -1,8 +1,8 @@
 #Don't count non-players
 tag @a[tag=!player] remove has_not_voted
 
-#Show the message in chat
-function game:end_game_vote/message
+#Show the message in chat (unless we're in singleplayer)
+execute if score player_count state matches 2.. run function game:end_game_vote/message
 
 #Handle players voting
 execute as @a[scores={trigger=201}, tag=has_not_voted] run function effects:sound/confirm_sound
