@@ -1,3 +1,11 @@
+#Update signs
+function lobby:signs/configuration/letters_in_bag/update_counter
+function lobby:signs/configuration/letters_in_bag/update_minus
+function lobby:signs/configuration/letters_in_bag/update_plus
+
+#Update interaction entities
+function lobby:signs/configuration/letters_in_bag/update_interaction_entities
+
 #Calculate minimum value (player count * 14)
 scoreboard players operation minimum_letters_in_bag lobby = player_count state
 scoreboard players operation minimum_letters_in_bag lobby *= 14 numerals
@@ -20,11 +28,3 @@ scoreboard players operation letters_in_bag_plus_large_step lobby += letters_in_
 
 scoreboard players operation letters_in_bag_minus_large_step lobby = letters_in_bag configuration
 scoreboard players operation letters_in_bag_minus_large_step lobby -= letters_in_bag_large_step lobby
-
-#Update signs
-function lobby:signs/configuration/letters_in_bag/update_counter
-function lobby:signs/configuration/letters_in_bag/update_minus
-function lobby:signs/configuration/letters_in_bag/update_plus
-
-#Update interaction entities
-function lobby:signs/configuration/letters_in_bag/update_interaction_entities
