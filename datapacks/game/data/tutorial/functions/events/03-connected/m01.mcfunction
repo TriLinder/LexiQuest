@@ -1,1 +1,1 @@
-tellraw @a {"text": "All letters on the board must be connected.", "color": "white"}
+tellraw @a {"text": "All the letters on the board must be connected.", "color": "white"}

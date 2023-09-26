@@ -1,1 +1,1 @@
-tellraw @a {"text": "You gain score from the value of each used letter.", "color": "white"}
+tellraw @a {"text": "You earn points based on the value of each letter used.", "color": "white"}

@@ -1,1 +1,1 @@
-tellraw @a {"text": "Gain extra points by placing your letters on bonus tiles.", "color": "white"}
+tellraw @a {"text": "Earn extra points by placing your letters on bonus tiles.", "color": "white"}
