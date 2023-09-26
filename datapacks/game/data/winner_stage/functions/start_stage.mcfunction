@@ -18,3 +18,6 @@ bossbar set minecraft:bar color green
 #Scoreboards
 scoreboard objectives setdisplay below_name
 scoreboard objectives setdisplay list
+
+#Spawn fake encouraging players when in single player
+execute if score player_count state matches 1 run function winner_stage:fake_players/spawn
