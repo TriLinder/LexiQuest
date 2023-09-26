@@ -1,0 +1,1 @@
+tellraw @a {"text": "Earn extra points by placing your letters on bonus squares.", "color": "white"}
