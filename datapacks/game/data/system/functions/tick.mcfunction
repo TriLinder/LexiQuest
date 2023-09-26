@@ -2,6 +2,7 @@ scoreboard players add tick_counter numerals 1
 
 #Players
 execute store result score player_count state run execute if entity @a
+execute store result score non_spectator_player_count state run execute if entity @a[gamemode=!spectator]
 execute as @a[tag=!player_detected] at @s run function system:player_server_join
 execute as @a[scores={left_server=1..}] at @s run function system:player_server_join
 
