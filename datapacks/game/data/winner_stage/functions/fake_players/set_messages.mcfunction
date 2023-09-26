@@ -1,0 +1,2 @@
+$execute as @e[tag=winner_stage_fake_players_first_message] run data merge entity @s {"text": "{\"text\": \"$(first_message)\"}"}
+$execute as @e[tag=winner_stage_fake_players_second_message] run data merge entity @s {"text": "{\"text\": \"$(second_message)\"}"}

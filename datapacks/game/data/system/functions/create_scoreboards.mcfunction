@@ -64,3 +64,12 @@ scoreboard objectives add letter_inv6 dummy
 
 #Hotbar buttons
 scoreboard objectives add hotbar_buttons dummy
+
+#Letters swapping
+scoreboard objectives add swapped_letters dummy
+
+#Game end vote
+scoreboard objectives add end_game_vote dummy
+
+#Tutorial
+scoreboard objectives add tutorial dummy

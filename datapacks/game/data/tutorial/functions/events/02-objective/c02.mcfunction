@@ -1,0 +1,1 @@
+tp @e[tag=tutorial_camera] 24.09 137.86 25.26 138.77 46.93

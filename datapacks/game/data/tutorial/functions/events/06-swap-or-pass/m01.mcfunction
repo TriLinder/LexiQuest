@@ -1,0 +1,1 @@
+tellraw @a {"text": "If you can’t form a valid word, you can either swap your letters or pass your turn.", "color": "white"}

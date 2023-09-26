@@ -9,6 +9,8 @@
 		{"predicate": {"custom_model_data": 2}, "model": "item/custom/play_button"},
 		{"predicate": {"custom_model_data": 3}, "model": "item/custom/pass_button"},
 		{"predicate": {"custom_model_data": 4}, "model": "item/custom/swap_button"},
-		{"predicate": {"custom_model_data": 5}, "model": "item/custom/end_button"}
+		{"predicate": {"custom_model_data": 5}, "model": "item/custom/end_button"},
+		{"predicate": {"custom_model_data": 6}, "model": "item/custom/recall_button"},
+		{"predicate": {"custom_model_data": 7}, "model": "item/custom/cancel_swapping_letters_button"}
 	]
 }

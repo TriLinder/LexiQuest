@@ -7,6 +7,7 @@
 | 00  | LOBBY        |
 | 01  | IN GAME      |
 | 02  | WINNER STAGE |
+| 03  | TUTORIAL     |
 
 ## Tile types
 
@@ -26,14 +27,20 @@
 | 00  | RIGHT (+X)               |
 | 01  | DOWN (+Z)                |
 
+## Hotbar buttons IDs
+
+Same as carrot on a stick action IDs. (0 = empty)
+
 ## Carrot on a Stick Actions
 
-| #   | ACTION       |
-|:---:|:------------:|
-| 01  | PLAY         |
-| 02  | PASS TURN    |
-| 03  | SWAP LETTERS |
-| 04  | END GAME     |
+| #   | ACTION                  |
+|:---:|:-----------------------:|
+| 01  | PLAY                    |
+| 02  | PASS TURN               |
+| 03  | SWAP LETTERS            |
+| 04  | END GAME                |
+| 05  | RECALL PLACED LETTERS   |
+| 06  | CANCEL SWAPPING LETTERS |
 
 ## Trigger IDs
 
@@ -60,3 +67,6 @@
 | 109 | LOBBY - MUSIC DISC - OTHERSIDE        | MUST BE IN LOBBY |
 | 110 | LOBBY - MUSIC DISC - PIGSTEP          | MUST BE IN LOBBY |
 | 111 | LOBBY - MUSIC DISC - STOP PLAYING     | MUST BE IN LOBBY |
+|     |                                       |                  |
+| 200 | START VOTE TO END GAME                | MUST BE IN GAME  |
+| 201 | VOTE TO END GAME                      |                  |

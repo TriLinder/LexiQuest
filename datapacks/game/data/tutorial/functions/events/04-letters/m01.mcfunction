@@ -1,0 +1,1 @@
+tellraw @a {"text": "You have a rack with a maximum of seven letters at a time, with more being drawn from a shared letter bag after your turn ends.", "color": "white"}

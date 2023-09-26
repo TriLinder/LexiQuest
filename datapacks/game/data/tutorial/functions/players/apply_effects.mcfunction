@@ -1,0 +1,1 @@
+effect give @s minecraft:slowness infinite 255 true
