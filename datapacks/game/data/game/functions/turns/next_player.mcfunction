@@ -1,5 +1,5 @@
 tag @a remove current_player
-tag @a remove swapping_letters
+execute if entity @a[tag=swapping_letters] run function game:letter_swapping/turn_over
 
 function game:board/recall_letters
 
