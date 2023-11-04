@@ -1,1 +1,0 @@
-$data merge storage game:share {"board_state": $(board_state)}
