@@ -6,3 +6,4 @@ execute if entity @a[scores={trigger=4}] as @a run stopsound @a
 execute if entity @a[scores={trigger=4}] run scoreboard players set state state -1
 execute if entity @a[scores={trigger=4}] as @a at @s run function effects:hud/scene_transition
 execute if entity @a[scores={trigger=4}] run schedule function game:start_game 10t
+execute if entity @a[scores={trigger=4}] run scoreboard players add lobby_games_started statistics 1
