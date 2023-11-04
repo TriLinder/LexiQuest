@@ -3,6 +3,9 @@ scoreboard objectives add state dummy
 scoreboard objectives add recursion_counter dummy
 scoreboard objectives add configuration dummy
 
+#Share link
+scoreboard objectives add share dummy
+
 #Misc
 scoreboard objectives add left_server minecraft.custom:minecraft.leave_game
 scoreboard objectives add numerals dummy

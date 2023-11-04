@@ -11,13 +11,15 @@
 
 ## Tile types
 
-| #   | TYPE                | BLOCK                 |
-|:---:|:-------------------:|:---------------------:|
-| 00  | REGULAR             | minecraft:purple_wool |
-| 01  | DOUBLE LETTER SCORE | minecraft:black_wool  |
-| 02  | TRIPLE LETTER SCORE | minecraft:brown_wool  |
-| 03  | +3 POINTS           | minecraft:green_wool  |
-| 04  | +8 POINTS           | minecraft:red_wool    |
+| #   | TYPE                | BLOCK                 | SHARE STRING |
+|:---:|:-------------------:|:---------------------:| ------------ |
+| 00  | REGULAR             | minecraft:purple_wool | `_`          |
+| 01  | DOUBLE LETTER SCORE | minecraft:black_wool  | `D`          |
+| 02  | TRIPLE LETTER SCORE | minecraft:brown_wool  | `T`          |
+| 03  | +3 POINTS           | minecraft:green_wool  | `3`          |
+| 04  | +8 POINTS           | minecraft:red_wool    | `8`          |
+
+ The starting tile is a block of `minecraft:blue_wool` with a share string of `S`.
 
 ## Word directions
 

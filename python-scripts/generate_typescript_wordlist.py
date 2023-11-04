@@ -8,6 +8,8 @@ def generate_typescript_wordlist() -> None:
     words = [word for word in words if word.lower().isalpha()]
     words.sort()
 
+    print(len(words))
+
     output = "// This file was generated using `generate_typescript_wordlist.py` in the TriLinder/LexiQuest repository. \n"
     output += "// Wordlist generated using: http://app.aspell.net/create \n"
     output += "// Click here for more information about the wordlist: https://raw.githubusercontent.com/TriLinder/LexiQuest/main/datapacks/game/data/wordlist/README \n\n"
