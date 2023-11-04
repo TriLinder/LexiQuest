@@ -2,6 +2,7 @@
 scoreboard objectives add state dummy
 scoreboard objectives add recursion_counter dummy
 scoreboard objectives add configuration dummy
+scoreboard objectives add player_head_slot dummy
 
 #Share link
 scoreboard objectives add share dummy

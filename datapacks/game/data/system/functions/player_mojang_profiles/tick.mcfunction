@@ -1,0 +1,1 @@
+execute as @a[tag=polling_player_head] run function system:player_mojang_profiles/polling/call_macro
