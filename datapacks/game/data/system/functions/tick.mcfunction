@@ -8,6 +8,7 @@ execute as @a[scores={left_server=1..}] at @s run function system:player_server_
 
 #Ticks
 function system:player_mojang_profiles/tick
+function share:tick
 
 execute if score state state matches 0 run function lobby:tick
 execute if score state state matches 1 run function game:tick

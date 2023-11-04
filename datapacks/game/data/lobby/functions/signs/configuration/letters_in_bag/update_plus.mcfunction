@@ -4,4 +4,4 @@ execute as @e[tag=letters_in_bag_plus] at @s if score letters_in_bag configurati
 
 #Check for clicks
 execute if entity @a[scores={trigger=2}] run scoreboard players add letters_in_bag configuration 1
-execute if entity @a[scores={trigger=2}] as @e[tag=letters_in_bag_plus] at @s run function effects:sound/click_sound
+execute if entity @a[scores={trigger=2}] as @e[tag=letters_in_bag_plus] at @s run function effects:sound/proximity_click_sound

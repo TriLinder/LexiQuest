@@ -1,0 +1,1 @@
+execute as @a[distance=..8] at @s run function effects:sound/click_sound
