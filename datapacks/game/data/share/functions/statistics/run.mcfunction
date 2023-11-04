@@ -11,5 +11,6 @@ function share:statistics/append_statistic {statistic: "lobby_played_discs"}
 function share:statistics/append_statistic {statistic: "lobby_stopped_discs"}
 function share:statistics/append_statistic {statistic: "game_ticks_length"}
 function share:statistics/append_statistic {statistic: "game_turns"}
+function share:statistics/append_statistic {statistic: "winner_stage_latest_fake_players_message"}
 
 data modify storage game:share statistics set from storage game:temp statistics

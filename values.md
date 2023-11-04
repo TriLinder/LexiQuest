@@ -72,3 +72,15 @@ Same as carrot on a stick action IDs. (0 = empty)
 |     |                                       |                  |
 | 200 | START VOTE TO END GAME                | MUST BE IN GAME  |
 | 201 | VOTE TO END GAME                      |                  |
+|     |                                       |                  |
+| 300 | CHANGE TELEMETRY LEVEL TO `0`         |                  |
+| 301 | CHANGE TELEMETRY LEVEL TO `1`         |                  |
+| 302 | CHANGE TELEMETRY LEVEL TO `2`         |                  |
+
+## Telemetry levels
+
+| LEVEL | SHARED DATA         |
+|:-----:|:-------------------:|
+| 0     | None                |
+| 1     | Statistics          |
+| 2     | All share link data |
