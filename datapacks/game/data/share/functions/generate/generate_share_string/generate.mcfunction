@@ -1,0 +1,1 @@
+$data merge storage game:share {"share_string": "0*$(configuration)*$(statistics)*$(player_data)*$(board_state)"}
