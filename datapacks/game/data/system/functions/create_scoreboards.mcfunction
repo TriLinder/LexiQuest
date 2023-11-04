@@ -6,6 +6,7 @@ scoreboard objectives add player_head_slot dummy
 scoreboard objectives add player_id dummy
 
 #Share link
+scoreboard objectives add statistics dummy
 scoreboard objectives add share dummy
 
 #Misc

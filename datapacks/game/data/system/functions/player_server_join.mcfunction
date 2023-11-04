@@ -20,3 +20,4 @@ execute if score state state matches 2 run function winner_stage:players/player_
 execute unless score @s player_id matches 0.. run function system:assign_player_id
 
 function system:player_mojang_profiles/player_server_join
+execute if score player_count state > highest_player_count statistics run scoreboard players operation highest_player_count statistics = player_count state

@@ -9,3 +9,5 @@ execute if score $current turn_order >= $incremental turn_order run scoreboard p
 execute as @a[tag=player] if score @s turn_order = $current turn_order run tag @s add current_player
 execute if score non_spectator_player_count state matches 2.. as @a[tag=current_player] at @s run function game:turns/notify
 function game:board/update
+
+scoreboard players add game_turns statistics 1
