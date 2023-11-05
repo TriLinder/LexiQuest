@@ -3,6 +3,7 @@ scoreboard objectives add state dummy
 scoreboard objectives add recursion_counter dummy
 scoreboard objectives add configuration dummy
 scoreboard objectives add player_head_slot dummy
+scoreboard objectives add player_mojang_profile_timeout dummy
 scoreboard objectives add player_id dummy
 
 #Share link

@@ -35,3 +35,4 @@ execute if score $lowest_available_slot player_head_slot matches 26 run item rep
 loot insert 64 64 64 loot system:player_head
 
 tag @s add polling_player_head
+scoreboard players set @s player_mojang_profile_timeout 0
