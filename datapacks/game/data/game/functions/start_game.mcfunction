@@ -11,6 +11,7 @@ scoreboard players set state state 1
 bossbar set minecraft:bar visible true
 bossbar set minecraft:letters_left_in_bag visible true
 
+execute store result score game_id statistics run random value 0..2147483646
 scoreboard players set game_ticks_length statistics 0
 scoreboard players set game_turns statistics 0
 
