@@ -15,6 +15,8 @@ execute store result score game_id statistics run random value 0..2147483646
 scoreboard players set game_ticks_length statistics 0
 scoreboard players set game_turns statistics 0
 
+schedule function game:messages/wordlist_explanation 5s
+
 scoreboard objectives setdisplay below_name score
 scoreboard objectives setdisplay list score
 
