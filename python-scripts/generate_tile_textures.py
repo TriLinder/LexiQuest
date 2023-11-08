@@ -10,8 +10,8 @@ def generate_letter_texture(data: dict) -> None:
     value = data["value"]
     block = data["block"]
 
-    font_large = ImageFont.truetype(str(Path("assets/font.otf")), 64)
-    font_smaller = ImageFont.truetype(str(Path("assets/font.otf")), 42)
+    font_large = ImageFont.truetype(str(Path("assets/font.otf")), 72)
+    font_smaller = ImageFont.truetype(str(Path("assets/font.otf")), 36)
 
     image = Image.new("RGB", (128, 128), color=(250, 250, 250))
     draw = ImageDraw.Draw(image)
@@ -26,7 +26,7 @@ def generate_letter_texture(data: dict) -> None:
     image.save(Path(f"output/tile_textures/{block[10:]}.png"), quality=100)
 
 def generate_special_tile(text: str, background_color: tuple, block) -> None:
-    font = ImageFont.truetype(str(Path("assets/font.otf")), 64)
+    font = ImageFont.truetype(str(Path("assets/font.otf")), 72)
 
     image = Image.new("RGB", (128, 128), color=background_color)
     draw = ImageDraw.Draw(image)
