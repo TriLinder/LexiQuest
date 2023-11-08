@@ -32,3 +32,6 @@ execute if entity @a[scores={trigger=110}] run stopsound @a record
 execute if entity @a[scores={trigger=110}] run execute as @e[tag=lobby_music_source] at @s run playsound minecraft:music_disc.pigstep record @a ~ ~ ~ 100 1 1
 
 execute if entity @a[scores={trigger=111}] run stopsound @a record
+
+execute as @a if score @s trigger matches 100..110 run scoreboard players add lobby_played_discs statistics 1
+execute as @a if score @s trigger matches 111 run scoreboard players add lobby_stopped_discs statistics 1

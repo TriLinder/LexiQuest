@@ -21,3 +21,5 @@ scoreboard objectives setdisplay list
 
 #Spawn fake encouraging players when in single player
 execute if score player_count state matches 1 run function winner_stage:fake_players/spawn
+execute unless score player_count state matches 1 run scoreboard players set fake_players_message winner_stage -1
+scoreboard players operation winner_stage_latest_fake_players_message statistics = fake_players_message winner_stage

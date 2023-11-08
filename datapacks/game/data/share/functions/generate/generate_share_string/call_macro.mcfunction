@@ -1,0 +1,1 @@
+function share:generate/generate_share_string/generate with storage game:share

@@ -1,1 +1,1 @@
-playsound minecraft:ui.button.click master @a[distance=..8] ~ ~ ~ .1 2 1
+playsound minecraft:ui.button.click master @s ~ ~ ~ .1 2 1

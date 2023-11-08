@@ -1,0 +1,1 @@
+$data merge storage game:temp {"configuration": "$(configuration)$(appended_string)"}

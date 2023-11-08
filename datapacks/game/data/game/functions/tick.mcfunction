@@ -1,3 +1,5 @@
+scoreboard players add game_ticks_length statistics 1
+
 title @a actionbar ""
 
 function game:tile_placing/tick
