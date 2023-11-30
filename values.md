@@ -59,7 +59,7 @@ Same as carrot on a stick action IDs. (0 = empty)
 |     |                                       |                  |
 | 100 | LOBBY - MUSIC DISC - CAT              | MUST BE IN LOBBY |
 | 101 | LOBBY - MUSIC DISC - BLOCKS           | MUST BE IN LOBBY |
-| 102 | LOBBY - MUSIC DISC - CHRIP            | MUST BE IN LOBBY |
+| 102 | LOBBY - MUSIC DISC - CHIRP            | MUST BE IN LOBBY |
 | 103 | LOBBY - MUSIC DISC - FAR              | MUST BE IN LOBBY |
 | 104 | LOBBY - MUSIC DISC - MALL             | MUST BE IN LOBBY |
 | 105 | LOBBY - MUSIC DISC - RELIC            | MUST BE IN LOBBY |
