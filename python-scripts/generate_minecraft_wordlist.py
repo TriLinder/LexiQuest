@@ -29,9 +29,14 @@ def generate_word(id: int, word: str) -> None:
                     coordinates = [f"~{i + 1} ~ ~", f"~ ~ ~{i + 1}"] #Coordinates (directions) to check
 
                     for direction, coords in enumerate(coordinates):
-                        condition = f"execute if block {coords} {next_letter['block']}"
-                        
-                        output += f"{condition} run scoreboard players set @s word_direction {direction} \n"
+                        if i == 0:
+                            #Determine the word direction for the first character
+                            condition = f"execute if block {coords} {next_letter['block']}"
+                            output += f"{condition} run scoreboard players set @s word_direction {direction} \n"
+                        else :
+                            #We already know the direction, so we have to stick to it
+                            condition = f"execute if score @s word_direction matches {direction} if block {coords} {next_letter['block']}"
+
                         output += f"{condition} run function wordlist:{'/'.join(word[:i+2])}/c \n"
                     
                     f.write(output.replace(" \n", "\n"))
@@ -54,7 +59,7 @@ def generate_word(id: int, word: str) -> None:
                 output += f"execute if score @s enclosed_with_space matches 1 if score @s word_direction matches 0 run scoreboard players set @s word_id_right {id} \n"
                 output += f"execute if score @s enclosed_with_space matches 1 if score @s word_direction matches 1 run scoreboard players set @s word_id_down {id} \n"
 
-                #Fill blue concrete
+                #Fill blue concrete (which represents a valid word)
                 coordinates = [f"~{len(word) - 1} ~-1 ~", f"~ ~-1 ~{len(word) - 1}"] #Coordinates (directions) to fill
                 
                 for direction, coords in enumerate(coordinates):
@@ -63,8 +68,10 @@ def generate_word(id: int, word: str) -> None:
                 f.write(output.replace(" \n", "\n"))
 
 def generate_minecraft_wordlist() -> None:
+    #Sort the words by length so longer words always replace shorter words during checking
     words.sort(key=lambda word: len(word))
 
+    #Generate the inital `check_all` function
     with open(Path("output/wordlist/check_all.mcfunction"), "w") as f:
         output = ""
         
@@ -82,7 +89,7 @@ def generate_minecraft_wordlist() -> None:
 
     for id, word in enumerate(words):
         if len(word) >= 2 and word.isalpha():
-            print(f"{id} / {len(words)}")
+            print(f"{id} / {len(words)} {word}")
             
             generate_word(id, word)
 
