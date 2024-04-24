@@ -8,20 +8,12 @@ def generate_letter_loot_table() -> None:
     entries = []
 
     for letter in letters:
-        entry = {}
-
-        entry["type"] = "minecraft:item"
-        entry["name"] = letter["block"]
-        entry["weight"] = letter["amount"]
-
-        nbt = {
-                "display": {
-                                "Name": json.dumps({"text": f"Letter {letter['letter']}", "italic": False}),
-                                "Lore": [json.dumps({"text": f"Value: {letter['value']}", "italic": False})]
-                            }
-            }
-        
-        entry["functions"] = [{"function": "minecraft:set_nbt", "tag": json.dumps(nbt)}]
+        entry = {
+            "LEXIQUEST_LETTER": letter["letter"],
+            "type": "minecraft:item",
+            "name": letter["block"],
+            "weight": letter["amount"]
+        }
 
         entries.append(entry)
 
