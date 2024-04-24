@@ -1,2 +1,2 @@
 clear @s
-item replace entity @s[tag=winner] armor.head with minecraft:egg{HideFlags: 127, Enchantments: [{lvl:1s, id: "minecraft:protection"}], display: {"Name": "{\"text\": \"Winner's crown\", \"italic\": false}"}}
+item replace entity @s[tag=winner] armor.head with egg[custom_name='{"italic":false,"text":"Winner\'s crown"}',enchantments={levels:{"minecraft:protection":1},show_in_tooltip:false},hide_additional_tooltip={}] 1
