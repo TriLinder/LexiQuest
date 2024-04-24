@@ -65,10 +65,10 @@ def generate_inventory_update():
     lore = {"text": "Right-click to confirm your play", "italic": False}
 
     components = []
-    components.append("minecraft:custom_model_data=4")
+    components.append("minecraft:custom_model_data=2")
     components.append(f"minecraft:custom_name='{json.dumps(custom_name)}'")
     components.append(f"minecraft:lore=['{json.dumps(lore)}']")
-    components.append("minecraft:custom_data={action: 3}")
+    components.append("minecraft:custom_data={action: 1}")
 
     components_string = ",".join(components)
 
