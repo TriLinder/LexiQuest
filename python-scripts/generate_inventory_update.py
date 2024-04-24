@@ -8,15 +8,16 @@ def generate_inventory_update():
     output = "# Generated using generate_inventory_update.py \n"
     
     # Off-hand
-    nbt = {
-                "CustomModelData": 1,
-                "Action": 0,
-                "display": {
-                                "Name": json.dumps({"text": ""}),
-                            }
-            }
+    custom_name = {"text": ""}
 
-    output += f"execute if entity @s[tag=current_player] run item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick{json.dumps(nbt)} \n"
+    components = []
+    components.append("minecraft:custom_model_data=1")
+    components.append(f"minecraft:custom_name='{json.dumps(custom_name)}'")
+    components.append("minecraft:custom_data={action: 0}")
+
+    components_string = ",".join(components)
+
+    output += f"execute if entity @s[tag=current_player] run item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick[{components_string}] \n"
     output += f"execute unless entity @s[tag=current_player] run item replace entity @s weapon.offhand with minecraft:air \n"
 
     # Inventory
@@ -30,15 +31,17 @@ def generate_inventory_update():
     # Hotbar (letters)
     for hotbar_slot in range(7):
         for id, letter in enumerate(letters):
-            nbt = {
-                "IsLetter": True,
-                "display": {
-                                "Name": json.dumps({"text": f"Letter {letter['letter']}", "italic": False}),
-                                "Lore": [json.dumps({"text": f"Value: {letter['value']}", "italic": False})]
-                            }
-            }
+            custom_name = {"text": f"Letter {letter['letter']}", "italic": False}
+            lore = {"text": f"Value: {letter['value']}", "italic": False}
 
-            output += f"execute if score @s letter_inv{hotbar_slot} matches {id} run item replace entity @s hotbar.{hotbar_slot} with {letter['block']}{json.dumps(nbt)} \n"
+            components = []
+            components.append(f"minecraft:custom_name='{json.dumps(custom_name)}'")
+            components.append(f"minecraft:lore=['{json.dumps(lore)}']")
+            components.append("minecraft:custom_data={is_letter: True}")
+
+            components_string = ",".join(components)
+
+            output += f"execute if score @s letter_inv{hotbar_slot} matches {id} run item replace entity @s hotbar.{hotbar_slot} with {letter['block']}[{components_string}] \n"
 
     # Hotbar (buttons)
 
@@ -58,82 +61,94 @@ def generate_inventory_update():
     output += "execute if entity @s[tag=current_player] if entity @s[tag=swapping_letters] if score @s swapped_letters matches 0 run scoreboard players set slot0 hotbar_buttons 6 \n"
 
     #Play button
-    nbt = {
-                "CustomModelData": 2,
-                "Action": 1,
-                "display": {
-                                "Name": json.dumps({"text": "Play", "italic": False}),
-                                "Lore": [json.dumps({"text": "Right-click to confirm your play", "italic": False})]
-                            }
-            }
+    custom_name = {"text": "Play", "italic": False}
+    lore = {"text": "Right-click to confirm your play", "italic": False}
 
-    output += f"execute if score slot0 hotbar_buttons matches 1 run item replace entity @s hotbar.7 with minecraft:carrot_on_a_stick{json.dumps(nbt)} \n"
-    output += f"execute if score slot1 hotbar_buttons matches 1 run item replace entity @s hotbar.8 with minecraft:carrot_on_a_stick{json.dumps(nbt)} \n"
+    components = []
+    components.append("minecraft:custom_model_data=2")
+    components.append(f"minecraft:custom_name='{json.dumps(custom_name)}'")
+    components.append(f"minecraft:lore=['{json.dumps(lore)}']")
+    components.append("minecraft:custom_data={action: 1}")
+
+    components_string = ",".join(components)
+
+    output += f"execute if score slot0 hotbar_buttons matches 1 run item replace entity @s hotbar.7 with minecraft:carrot_on_a_stick[{components_string}] \n"
+    output += f"execute if score slot1 hotbar_buttons matches 1 run item replace entity @s hotbar.8 with minecraft:carrot_on_a_stick[{components_string}] \n"
 
     #Pass turn button
-    nbt = {
-                "CustomModelData": 3,
-                "Action": 2,
-                "display": {
-                                "Name": json.dumps({"text": "Pass turn", "italic": False}),
-                                "Lore": [json.dumps({"text": "Right-click to pass your turn", "italic": False})]
-                            }
-            }
+    custom_name = {"text": "Pass turn", "italic": False}
+    lore = {"text": "Right-click to pass your turn", "italic": False}
 
-    output += f"execute if score slot0 hotbar_buttons matches 2 run item replace entity @s hotbar.7 with minecraft:carrot_on_a_stick{json.dumps(nbt)} \n"
-    output += f"execute if score slot1 hotbar_buttons matches 2 run item replace entity @s hotbar.8 with minecraft:carrot_on_a_stick{json.dumps(nbt)} \n"
+    components = []
+    components.append("minecraft:custom_model_data=3")
+    components.append(f"minecraft:custom_name='{json.dumps(custom_name)}'")
+    components.append(f"minecraft:lore=['{json.dumps(lore)}']")
+    components.append("minecraft:custom_data={action: 2}")
+
+    components_string = ",".join(components)
+
+    output += f"execute if score slot0 hotbar_buttons matches 2 run item replace entity @s hotbar.7 with minecraft:carrot_on_a_stick[{components_string}] \n"
+    output += f"execute if score slot1 hotbar_buttons matches 2 run item replace entity @s hotbar.8 with minecraft:carrot_on_a_stick[{components_string}] \n"
 
     #Swap letters button
-    nbt = {
-                "CustomModelData": 4,
-                "Action": 3,
-                "display": {
-                                "Name": json.dumps({"text": "Swap letters", "italic": False}),
-                                "Lore": [json.dumps({"text": "Right-click to swap your letters", "italic": False})]
-                            }
-            }
+    custom_name = {"text": "Swap letters", "italic": False}
+    lore = {"text": "Right-click to swap your letters", "italic": False}
 
-    output += f"execute if score slot0 hotbar_buttons matches 3 run item replace entity @s hotbar.7 with minecraft:carrot_on_a_stick{json.dumps(nbt)} \n"
-    output += f"execute if score slot1 hotbar_buttons matches 3 run item replace entity @s hotbar.8 with minecraft:carrot_on_a_stick{json.dumps(nbt)} \n"
+    components = []
+    components.append("minecraft:custom_model_data=4")
+    components.append(f"minecraft:custom_name='{json.dumps(custom_name)}'")
+    components.append(f"minecraft:lore=['{json.dumps(lore)}']")
+    components.append("minecraft:custom_data={action: 3}")
+
+    components_string = ",".join(components)
+
+    output += f"execute if score slot0 hotbar_buttons matches 3 run item replace entity @s hotbar.7 with minecraft:carrot_on_a_stick[{components_string}] \n"
+    output += f"execute if score slot1 hotbar_buttons matches 3 run item replace entity @s hotbar.8 with minecraft:carrot_on_a_stick[{components_string}] \n"
 
     #End game button
-    nbt = {
-                "CustomModelData": 5,
-                "Action": 4,
-                "display": {
-                                "Name": json.dumps({"text": "End the Game", "italic": False}),
-                                "Lore": [json.dumps({"text": "Right-click to start a vote to end the game", "italic": False})]
-                            }
-            }
+    custom_name = {"text": "End the Game", "italic": False}
+    lore = {"text": "Right-click to start a vote to end the game", "italic": False}
 
-    output += f"execute if score slot0 hotbar_buttons matches 4 run item replace entity @s hotbar.7 with minecraft:carrot_on_a_stick{json.dumps(nbt)} \n"
-    output += f"execute if score slot1 hotbar_buttons matches 4 run item replace entity @s hotbar.8 with minecraft:carrot_on_a_stick{json.dumps(nbt)} \n"
+    components = []
+    components.append("minecraft:custom_model_data=5")
+    components.append(f"minecraft:custom_name='{json.dumps(custom_name)}'")
+    components.append(f"minecraft:lore=['{json.dumps(lore)}']")
+    components.append("minecraft:custom_data={action: 4}")
+
+    components_string = ",".join(components)
+
+    output += f"execute if score slot0 hotbar_buttons matches 4 run item replace entity @s hotbar.7 with minecraft:carrot_on_a_stick[{components_string}] \n"
+    output += f"execute if score slot1 hotbar_buttons matches 4 run item replace entity @s hotbar.8 with minecraft:carrot_on_a_stick[{components_string}] \n"
 
     #Recall placed letters button
-    nbt = {
-                "CustomModelData": 6,
-                "Action": 5,
-                "display": {
-                                "Name": json.dumps({"text": "Recall letters", "italic": False}),
-                                "Lore": [json.dumps({"text": "Right-click to recall placed letters", "italic": False})]
-                            }
-            }
+    custom_name = {"text": "Recall letters", "italic": False}
+    lore = {"text": "Right-click to recall placed letters", "italic": False}
 
-    output += f"execute if score slot0 hotbar_buttons matches 5 run item replace entity @s hotbar.7 with minecraft:carrot_on_a_stick{json.dumps(nbt)} \n"
-    output += f"execute if score slot1 hotbar_buttons matches 5 run item replace entity @s hotbar.8 with minecraft:carrot_on_a_stick{json.dumps(nbt)} \n"
+    components = []
+    components.append("minecraft:custom_model_data=6")
+    components.append(f"minecraft:custom_name='{json.dumps(custom_name)}'")
+    components.append(f"minecraft:lore=['{json.dumps(lore)}']")
+    components.append("minecraft:custom_data={action: 5}")
+
+    components_string = ",".join(components)
+
+    output += f"execute if score slot0 hotbar_buttons matches 5 run item replace entity @s hotbar.7 with minecraft:carrot_on_a_stick[{components_string}] \n"
+    output += f"execute if score slot1 hotbar_buttons matches 5 run item replace entity @s hotbar.8 with minecraft:carrot_on_a_stick[{components_string}] \n"
 
     #Cancel swapping button
-    nbt = {
-                "CustomModelData": 7,
-                "Action": 6,
-                "display": {
-                                "Name": json.dumps({"text": "Cancel swapping", "italic": False}),
-                                "Lore": [json.dumps({"text": "Right-click to cancel swapping letters", "italic": False})]
-                            }
-            }
+    custom_name = {"text": "Cancel swapping", "italic": False}
+    lore = {"text": "Right-click to cancel swapping letters", "italic": False}
 
-    output += f"execute if score slot0 hotbar_buttons matches 6 run item replace entity @s hotbar.7 with minecraft:carrot_on_a_stick{json.dumps(nbt)} \n"
-    output += f"execute if score slot1 hotbar_buttons matches 6 run item replace entity @s hotbar.8 with minecraft:carrot_on_a_stick{json.dumps(nbt)} \n"
+    components = []
+    components.append("minecraft:custom_model_data=7")
+    components.append(f"minecraft:custom_name='{json.dumps(custom_name)}'")
+    components.append(f"minecraft:lore=['{json.dumps(lore)}']")
+    components.append("minecraft:custom_data={action: 6}")
+
+    components_string = ",".join(components)
+
+    output += f"execute if score slot0 hotbar_buttons matches 6 run item replace entity @s hotbar.7 with minecraft:carrot_on_a_stick[{components_string}] \n"
+    output += f"execute if score slot1 hotbar_buttons matches 6 run item replace entity @s hotbar.8 with minecraft:carrot_on_a_stick[{components_string}] \n"
     
     #Clear the slots if empty
     output += f"execute if score slot0 hotbar_buttons matches 0 run item replace entity @s hotbar.7 with minecraft:air \n"

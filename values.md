@@ -76,6 +76,7 @@ Same as carrot on a stick action IDs. (0 = empty)
 | 300 | CHANGE TELEMETRY LEVEL TO `0`         |                  |
 | 301 | CHANGE TELEMETRY LEVEL TO `1`         |                  |
 | 302 | CHANGE TELEMETRY LEVEL TO `2`         |                  |
+| 303 | READ MORE TELEMETRY INFORMATION       |                  |
 
 ## Telemetry levels
 

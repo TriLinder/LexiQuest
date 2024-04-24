@@ -5,290 +5,160 @@
             "bonus_rolls": 0,
             "entries": [
                 {
+                    "LEXIQUEST_LETTER": "A",
                     "type": "minecraft:item",
                     "name": "minecraft:white_concrete_powder",
-                    "weight": 9,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{\"display\": {\"Name\": \"{\\\"text\\\": \\\"Letter A\\\", \\\"italic\\\": false}\", \"Lore\": [\"{\\\"text\\\": \\\"Value: 1\\\", \\\"italic\\\": false}\"]}}"
-                        }
-                    ]
+                    "weight": 9
                 },
                 {
+                    "LEXIQUEST_LETTER": "B",
                     "type": "minecraft:item",
                     "name": "minecraft:orange_concrete_powder",
-                    "weight": 2,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{\"display\": {\"Name\": \"{\\\"text\\\": \\\"Letter B\\\", \\\"italic\\\": false}\", \"Lore\": [\"{\\\"text\\\": \\\"Value: 3\\\", \\\"italic\\\": false}\"]}}"
-                        }
-                    ]
+                    "weight": 2
                 },
                 {
+                    "LEXIQUEST_LETTER": "C",
                     "type": "minecraft:item",
                     "name": "minecraft:magenta_concrete_powder",
-                    "weight": 2,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{\"display\": {\"Name\": \"{\\\"text\\\": \\\"Letter C\\\", \\\"italic\\\": false}\", \"Lore\": [\"{\\\"text\\\": \\\"Value: 3\\\", \\\"italic\\\": false}\"]}}"
-                        }
-                    ]
+                    "weight": 2
                 },
                 {
+                    "LEXIQUEST_LETTER": "D",
                     "type": "minecraft:item",
                     "name": "minecraft:light_blue_concrete_powder",
-                    "weight": 4,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{\"display\": {\"Name\": \"{\\\"text\\\": \\\"Letter D\\\", \\\"italic\\\": false}\", \"Lore\": [\"{\\\"text\\\": \\\"Value: 2\\\", \\\"italic\\\": false}\"]}}"
-                        }
-                    ]
+                    "weight": 4
                 },
                 {
+                    "LEXIQUEST_LETTER": "E",
                     "type": "minecraft:item",
                     "name": "minecraft:yellow_concrete_powder",
-                    "weight": 12,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{\"display\": {\"Name\": \"{\\\"text\\\": \\\"Letter E\\\", \\\"italic\\\": false}\", \"Lore\": [\"{\\\"text\\\": \\\"Value: 1\\\", \\\"italic\\\": false}\"]}}"
-                        }
-                    ]
+                    "weight": 12
                 },
                 {
+                    "LEXIQUEST_LETTER": "F",
                     "type": "minecraft:item",
                     "name": "minecraft:lime_concrete_powder",
-                    "weight": 2,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{\"display\": {\"Name\": \"{\\\"text\\\": \\\"Letter F\\\", \\\"italic\\\": false}\", \"Lore\": [\"{\\\"text\\\": \\\"Value: 4\\\", \\\"italic\\\": false}\"]}}"
-                        }
-                    ]
+                    "weight": 2
                 },
                 {
+                    "LEXIQUEST_LETTER": "G",
                     "type": "minecraft:item",
                     "name": "minecraft:pink_concrete_powder",
-                    "weight": 3,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{\"display\": {\"Name\": \"{\\\"text\\\": \\\"Letter G\\\", \\\"italic\\\": false}\", \"Lore\": [\"{\\\"text\\\": \\\"Value: 2\\\", \\\"italic\\\": false}\"]}}"
-                        }
-                    ]
+                    "weight": 3
                 },
                 {
+                    "LEXIQUEST_LETTER": "H",
                     "type": "minecraft:item",
                     "name": "minecraft:gray_concrete_powder",
-                    "weight": 2,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{\"display\": {\"Name\": \"{\\\"text\\\": \\\"Letter H\\\", \\\"italic\\\": false}\", \"Lore\": [\"{\\\"text\\\": \\\"Value: 4\\\", \\\"italic\\\": false}\"]}}"
-                        }
-                    ]
+                    "weight": 2
                 },
                 {
+                    "LEXIQUEST_LETTER": "I",
                     "type": "minecraft:item",
                     "name": "minecraft:light_gray_concrete_powder",
-                    "weight": 9,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{\"display\": {\"Name\": \"{\\\"text\\\": \\\"Letter I\\\", \\\"italic\\\": false}\", \"Lore\": [\"{\\\"text\\\": \\\"Value: 1\\\", \\\"italic\\\": false}\"]}}"
-                        }
-                    ]
+                    "weight": 9
                 },
                 {
+                    "LEXIQUEST_LETTER": "J",
                     "type": "minecraft:item",
                     "name": "minecraft:cyan_concrete_powder",
-                    "weight": 1,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{\"display\": {\"Name\": \"{\\\"text\\\": \\\"Letter J\\\", \\\"italic\\\": false}\", \"Lore\": [\"{\\\"text\\\": \\\"Value: 8\\\", \\\"italic\\\": false}\"]}}"
-                        }
-                    ]
+                    "weight": 1
                 },
                 {
+                    "LEXIQUEST_LETTER": "K",
                     "type": "minecraft:item",
                     "name": "minecraft:purple_concrete_powder",
-                    "weight": 1,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{\"display\": {\"Name\": \"{\\\"text\\\": \\\"Letter K\\\", \\\"italic\\\": false}\", \"Lore\": [\"{\\\"text\\\": \\\"Value: 5\\\", \\\"italic\\\": false}\"]}}"
-                        }
-                    ]
+                    "weight": 1
                 },
                 {
+                    "LEXIQUEST_LETTER": "L",
                     "type": "minecraft:item",
                     "name": "minecraft:blue_concrete_powder",
-                    "weight": 4,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{\"display\": {\"Name\": \"{\\\"text\\\": \\\"Letter L\\\", \\\"italic\\\": false}\", \"Lore\": [\"{\\\"text\\\": \\\"Value: 1\\\", \\\"italic\\\": false}\"]}}"
-                        }
-                    ]
+                    "weight": 4
                 },
                 {
+                    "LEXIQUEST_LETTER": "M",
                     "type": "minecraft:item",
                     "name": "minecraft:brown_concrete_powder",
-                    "weight": 2,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{\"display\": {\"Name\": \"{\\\"text\\\": \\\"Letter M\\\", \\\"italic\\\": false}\", \"Lore\": [\"{\\\"text\\\": \\\"Value: 3\\\", \\\"italic\\\": false}\"]}}"
-                        }
-                    ]
+                    "weight": 2
                 },
                 {
+                    "LEXIQUEST_LETTER": "N",
                     "type": "minecraft:item",
                     "name": "minecraft:green_concrete_powder",
-                    "weight": 6,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{\"display\": {\"Name\": \"{\\\"text\\\": \\\"Letter N\\\", \\\"italic\\\": false}\", \"Lore\": [\"{\\\"text\\\": \\\"Value: 1\\\", \\\"italic\\\": false}\"]}}"
-                        }
-                    ]
+                    "weight": 6
                 },
                 {
+                    "LEXIQUEST_LETTER": "O",
                     "type": "minecraft:item",
                     "name": "minecraft:red_concrete_powder",
-                    "weight": 8,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{\"display\": {\"Name\": \"{\\\"text\\\": \\\"Letter O\\\", \\\"italic\\\": false}\", \"Lore\": [\"{\\\"text\\\": \\\"Value: 1\\\", \\\"italic\\\": false}\"]}}"
-                        }
-                    ]
+                    "weight": 8
                 },
                 {
+                    "LEXIQUEST_LETTER": "P",
                     "type": "minecraft:item",
                     "name": "minecraft:black_concrete_powder",
-                    "weight": 2,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{\"display\": {\"Name\": \"{\\\"text\\\": \\\"Letter P\\\", \\\"italic\\\": false}\", \"Lore\": [\"{\\\"text\\\": \\\"Value: 3\\\", \\\"italic\\\": false}\"]}}"
-                        }
-                    ]
+                    "weight": 2
                 },
                 {
+                    "LEXIQUEST_LETTER": "Q",
                     "type": "minecraft:item",
                     "name": "minecraft:white_wool",
-                    "weight": 1,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{\"display\": {\"Name\": \"{\\\"text\\\": \\\"Letter Q\\\", \\\"italic\\\": false}\", \"Lore\": [\"{\\\"text\\\": \\\"Value: 10\\\", \\\"italic\\\": false}\"]}}"
-                        }
-                    ]
+                    "weight": 1
                 },
                 {
+                    "LEXIQUEST_LETTER": "R",
                     "type": "minecraft:item",
                     "name": "minecraft:orange_wool",
-                    "weight": 6,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{\"display\": {\"Name\": \"{\\\"text\\\": \\\"Letter R\\\", \\\"italic\\\": false}\", \"Lore\": [\"{\\\"text\\\": \\\"Value: 1\\\", \\\"italic\\\": false}\"]}}"
-                        }
-                    ]
+                    "weight": 6
                 },
                 {
+                    "LEXIQUEST_LETTER": "S",
                     "type": "minecraft:item",
                     "name": "minecraft:magenta_wool",
-                    "weight": 4,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{\"display\": {\"Name\": \"{\\\"text\\\": \\\"Letter S\\\", \\\"italic\\\": false}\", \"Lore\": [\"{\\\"text\\\": \\\"Value: 1\\\", \\\"italic\\\": false}\"]}}"
-                        }
-                    ]
+                    "weight": 4
                 },
                 {
+                    "LEXIQUEST_LETTER": "T",
                     "type": "minecraft:item",
                     "name": "minecraft:light_blue_wool",
-                    "weight": 6,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{\"display\": {\"Name\": \"{\\\"text\\\": \\\"Letter T\\\", \\\"italic\\\": false}\", \"Lore\": [\"{\\\"text\\\": \\\"Value: 1\\\", \\\"italic\\\": false}\"]}}"
-                        }
-                    ]
+                    "weight": 6
                 },
                 {
+                    "LEXIQUEST_LETTER": "U",
                     "type": "minecraft:item",
                     "name": "minecraft:yellow_wool",
-                    "weight": 4,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{\"display\": {\"Name\": \"{\\\"text\\\": \\\"Letter U\\\", \\\"italic\\\": false}\", \"Lore\": [\"{\\\"text\\\": \\\"Value: 1\\\", \\\"italic\\\": false}\"]}}"
-                        }
-                    ]
+                    "weight": 4
                 },
                 {
+                    "LEXIQUEST_LETTER": "V",
                     "type": "minecraft:item",
                     "name": "minecraft:lime_wool",
-                    "weight": 2,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{\"display\": {\"Name\": \"{\\\"text\\\": \\\"Letter V\\\", \\\"italic\\\": false}\", \"Lore\": [\"{\\\"text\\\": \\\"Value: 4\\\", \\\"italic\\\": false}\"]}}"
-                        }
-                    ]
+                    "weight": 2
                 },
                 {
+                    "LEXIQUEST_LETTER": "W",
                     "type": "minecraft:item",
                     "name": "minecraft:pink_wool",
-                    "weight": 2,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{\"display\": {\"Name\": \"{\\\"text\\\": \\\"Letter W\\\", \\\"italic\\\": false}\", \"Lore\": [\"{\\\"text\\\": \\\"Value: 4\\\", \\\"italic\\\": false}\"]}}"
-                        }
-                    ]
+                    "weight": 2
                 },
                 {
+                    "LEXIQUEST_LETTER": "X",
                     "type": "minecraft:item",
                     "name": "minecraft:gray_wool",
-                    "weight": 1,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{\"display\": {\"Name\": \"{\\\"text\\\": \\\"Letter X\\\", \\\"italic\\\": false}\", \"Lore\": [\"{\\\"text\\\": \\\"Value: 8\\\", \\\"italic\\\": false}\"]}}"
-                        }
-                    ]
+                    "weight": 1
                 },
                 {
+                    "LEXIQUEST_LETTER": "Y",
                     "type": "minecraft:item",
                     "name": "minecraft:light_gray_wool",
-                    "weight": 2,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{\"display\": {\"Name\": \"{\\\"text\\\": \\\"Letter Y\\\", \\\"italic\\\": false}\", \"Lore\": [\"{\\\"text\\\": \\\"Value: 4\\\", \\\"italic\\\": false}\"]}}"
-                        }
-                    ]
+                    "weight": 2
                 },
                 {
+                    "LEXIQUEST_LETTER": "Z",
                     "type": "minecraft:item",
                     "name": "minecraft:cyan_wool",
-                    "weight": 1,
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{\"display\": {\"Name\": \"{\\\"text\\\": \\\"Letter Z\\\", \\\"italic\\\": false}\", \"Lore\": [\"{\\\"text\\\": \\\"Value: 10\\\", \\\"italic\\\": false}\"]}}"
-                        }
-                    ]
+                    "weight": 1
                 }
             ]
         }
