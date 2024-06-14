@@ -1,6 +1,6 @@
 {
     "pack": {
-        "pack_format": 41,
+        "pack_format": 48,
         "description": "Data pack for LexiQuest"
     },
     
@@ -8,11 +8,11 @@
         "block": [
             {
                 "namespace": "minecraft",
-                "path": "recipes/.*"
+                "path": "recipe/.*"
             },
             {
                 "namespace": "minecraft",
-                "path": "advancements/.*"
+                "path": "advancement/.*"
             }
         ]
     }
