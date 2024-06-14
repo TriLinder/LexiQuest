@@ -4,7 +4,7 @@
 
 Your favorite word board game in Minecraft.
 
-You can watch the video trailer [here](https://www.youtube.com/watch?v=uMO5CfCpZig).
+You can watch the video trailer [here](https://www.youtube.com/watch?v=WbAahLoOcNY).
 
 ---
 
