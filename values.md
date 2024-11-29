@@ -54,7 +54,7 @@ Same as carrot on a stick action IDs. (0 = empty)
 | 03  | RESERVED                              | --               |
 | 04  | LOBBY - PLAY SIGN                     | MUST BE IN LOBBY |
 | 05  | LOBBY - SPECIAL TILES CONFIG          | MUST BE IN LOBBY |
-| 06  | LOBBY - GITHUB SIGN                   | MUST BE IN LOBBY |
+| 06  | LOBBY - WEBSITE SIGN                  | MUST BE IN LOBBY |
 | 07  | LOBBY - TRAILER SIGN                  | MUST BE IN LOBBY |
 |     |                                       |                  |
 | 100 | LOBBY - MUSIC DISC - CAT              | MUST BE IN LOBBY |
