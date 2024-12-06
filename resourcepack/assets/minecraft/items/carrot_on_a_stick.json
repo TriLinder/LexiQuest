@@ -1,0 +1,68 @@
+{
+	"model": {
+	  "type": "minecraft:select",
+	  "property": "minecraft:custom_model_data",
+	  "index": 0,
+	  "cases": [
+		{
+		  "when": "blank",
+		  "model": {
+			"type": "minecraft:model",
+			"model": "minecraft:item/custom/blank"
+		  }
+		},
+
+		{
+			"when": "play_button",
+			"model": {
+			  "type": "minecraft:model",
+			  "model": "minecraft:item/custom/play_button"
+			}
+		  },
+
+		  {
+			"when": "pass_button",
+			"model": {
+			  "type": "minecraft:model",
+			  "model": "minecraft:item/custom/pass_button"
+			}
+		  },
+
+		  {
+			"when": "swap_button",
+			"model": {
+			  "type": "minecraft:model",
+			  "model": "minecraft:item/custom/swap_button"
+			}
+		  },
+
+		  {
+			"when": "cancel_swapping_letters_button",
+			"model": {
+			  "type": "minecraft:model",
+			  "model": "minecraft:item/custom/cancel_swapping_letters_button"
+			}
+		  },
+
+		  {
+			"when": "end_button",
+			"model": {
+			  "type": "minecraft:model",
+			  "model": "minecraft:item/custom/end_button"
+			}
+		  },
+
+		  {
+			"when": "recall_button",
+			"model": {
+			  "type": "minecraft:model",
+			  "model": "minecraft:item/custom/recall_button"
+			}
+		  }
+	  ],
+	  "fallback": {
+		"type": "minecraft:model",
+		"model": "minecraft:item/barrier"
+	  }
+	}
+  }

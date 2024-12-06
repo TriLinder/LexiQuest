@@ -11,7 +11,7 @@ def generate_inventory_update():
     custom_name = {"text": ""}
 
     components = []
-    components.append("minecraft:custom_model_data=1")
+    components.append('minecraft:custom_model_data={strings: ["blank"]}')
     components.append(f"minecraft:custom_name='{json.dumps(custom_name)}'")
     components.append("minecraft:custom_data={action: 0}")
 
@@ -65,7 +65,7 @@ def generate_inventory_update():
     lore = {"text": "Right-click to confirm your play", "italic": False}
 
     components = []
-    components.append("minecraft:custom_model_data=2")
+    components.append('minecraft:custom_model_data={strings: ["play_button"]}')
     components.append(f"minecraft:custom_name='{json.dumps(custom_name)}'")
     components.append(f"minecraft:lore=['{json.dumps(lore)}']")
     components.append("minecraft:custom_data={action: 1}")
@@ -80,7 +80,7 @@ def generate_inventory_update():
     lore = {"text": "Right-click to pass your turn", "italic": False}
 
     components = []
-    components.append("minecraft:custom_model_data=3")
+    components.append('minecraft:custom_model_data={strings: ["pass_button"]}')
     components.append(f"minecraft:custom_name='{json.dumps(custom_name)}'")
     components.append(f"minecraft:lore=['{json.dumps(lore)}']")
     components.append("minecraft:custom_data={action: 2}")
@@ -95,7 +95,7 @@ def generate_inventory_update():
     lore = {"text": "Right-click to swap your letters", "italic": False}
 
     components = []
-    components.append("minecraft:custom_model_data=4")
+    components.append('minecraft:custom_model_data={strings: ["swap_button"]}')
     components.append(f"minecraft:custom_name='{json.dumps(custom_name)}'")
     components.append(f"minecraft:lore=['{json.dumps(lore)}']")
     components.append("minecraft:custom_data={action: 3}")
@@ -110,7 +110,7 @@ def generate_inventory_update():
     lore = {"text": "Right-click to start a vote to end the game", "italic": False}
 
     components = []
-    components.append("minecraft:custom_model_data=5")
+    components.append('minecraft:custom_model_data={strings: ["end_button"]}')
     components.append(f"minecraft:custom_name='{json.dumps(custom_name)}'")
     components.append(f"minecraft:lore=['{json.dumps(lore)}']")
     components.append("minecraft:custom_data={action: 4}")
@@ -125,7 +125,7 @@ def generate_inventory_update():
     lore = {"text": "Right-click to recall placed letters", "italic": False}
 
     components = []
-    components.append("minecraft:custom_model_data=6")
+    components.append('minecraft:custom_model_data={strings: ["recall_button"]}')
     components.append(f"minecraft:custom_name='{json.dumps(custom_name)}'")
     components.append(f"minecraft:lore=['{json.dumps(lore)}']")
     components.append("minecraft:custom_data={action: 5}")
@@ -140,7 +140,7 @@ def generate_inventory_update():
     lore = {"text": "Right-click to cancel swapping letters", "italic": False}
 
     components = []
-    components.append("minecraft:custom_model_data=7")
+    components.append('minecraft:custom_model_data={strings: ["cancel_swapping_letters_button"]}')
     components.append(f"minecraft:custom_name='{json.dumps(custom_name)}'")
     components.append(f"minecraft:lore=['{json.dumps(lore)}']")
     components.append("minecraft:custom_data={action: 6}")
@@ -154,7 +154,7 @@ def generate_inventory_update():
     output += f"execute if score slot0 hotbar_buttons matches 0 run item replace entity @s hotbar.7 with minecraft:air \n"
     output += f"execute if score slot1 hotbar_buttons matches 0 run item replace entity @s hotbar.8 with minecraft:air \n"
 
-    with open(Path("output/inventory_update.mcfunction"), "w") as f:
+    with open(Path("output/update_inventory.mcfunction"), "w") as f:
         f.write(output)
 
 if __name__ == "__main__":
